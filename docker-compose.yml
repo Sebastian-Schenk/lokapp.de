@@ -1,11 +1,11 @@
 services:
   web:
-    image: nginx:1.27-alpine
+    build:
+      context: ./website
+      dockerfile: Dockerfile
+
     container_name: lokapp-web
     restart: unless-stopped
-
-    volumes:
-      - ./website:/usr/share/nginx/html:ro
 
     networks:
       proxy-net:
