@@ -16,11 +16,14 @@ services:
 
     healthcheck:
       test:
-        - CMD-SHELL
-        - wget -qO- http://127.0.0.1/ > /dev/null 2>&1
+        [
+          "CMD-SHELL",
+          "wget -qO- http://127.0.0.1/ > /dev/null 2>&1"
+        ]
       interval: 30s
       timeout: 5s
       retries: 3
+      start_period: 10s
 
   api:
     build:
@@ -41,13 +44,16 @@ services:
       proxy-net:
       mailcow-network:
 
-healthcheck:
-  test: >-
-    node -e "fetch('http://127.0.0.1:3000/api/health').then((response) => process.exit(response.ok ? 0 : 1)).catch(() => process.exit(1))"
-  interval: 30s
-  timeout: 8s
-  retries: 3
-  start_period: 15s
+    healthcheck:
+      test:
+        [
+          "CMD-SHELL",
+          "node -e \"fetch('http://127.0.0.1:3000/api/health').then((response) => process.exit(response.ok ? 0 : 1)).catch(() => process.exit(1))\""
+        ]
+      interval: 30s
+      timeout: 8s
+      retries: 3
+      start_period: 15s
 
 networks:
   internal:
