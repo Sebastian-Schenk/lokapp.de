@@ -33,7 +33,7 @@ services:
       DB_USER: "lokapp_web_api"
       DB_PASSWORD: "${DB_PASSWORD}"
 
-      SMTP_HOST: "mail.lokapp.de"
+      SMTP_HOST: "postfix-mailcow"
       SMTP_PORT: "587"
       SMTP_TLS_SERVERNAME: "mail.lokapp.de"
       SMTP_USER: "${SMTP_USER}"

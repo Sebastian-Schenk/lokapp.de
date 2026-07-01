@@ -684,12 +684,17 @@ const start = async () => {
   });
 
   mailer.verify()
-    .then(() => {
-      console.log('SMTP connection verified.');
-    })
-    .catch(() => {
-      console.error('SMTP connection could not be verified.');
+  .then(() => {
+    console.log('SMTP connection verified.');
+  })
+  .catch((error) => {
+    console.error('SMTP connection could not be verified:', {
+      code: error.code,
+      command: error.command,
+      responseCode: error.responseCode,
+      message: error.message,
     });
+  });
 };
 
 const shutdown = async () => {
