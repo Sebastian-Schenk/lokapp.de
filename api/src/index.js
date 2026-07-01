@@ -24,6 +24,8 @@ const config = {
   publicBaseUrl: requiredEnv('PUBLIC_BASE_URL').replace(/\/$/, ''),
   privacyVersion: requiredEnv('PRIVACY_VERSION'),
 
+  alphaConfirmationPagePath: '/pages/alpha-bestaetigt/',
+
   db: {
     host: requiredEnv('DB_HOST'),
     port: Number(process.env.DB_PORT || 5432),
@@ -110,6 +112,9 @@ const isValidEmail = (email) =>
 
 const normaliseEmail = (email) =>
   String(email || '').trim().toLowerCase();
+
+const alphaConfirmationRedirect = (state) =>
+  `${config.alphaConfirmationPagePath}?state=${state}`;
 
 const readCookies = (request) => {
   const rawCookieHeader = request.headers.cookie;
@@ -333,7 +338,12 @@ app.post(
             confirmationToken,
           });
         } catch (error) {
-          console.error('Alpha confirmation email could not be sent.');
+          console.error('Alpha confirmation email could not be sent:', {
+            code: error.code,
+            command: error.command,
+            responseCode: error.responseCode,
+            message: error.message,
+          });
 
           return response.status(503).json({
             error:
@@ -357,7 +367,10 @@ app.get('/api/v1/alpha/confirm', async (request, response, next) => {
     const token = String(request.query?.token || '');
 
     if (!/^[a-f0-9]{64}$/u.test(token)) {
-      return response.redirect(303, '/pages/alpha/?confirmed=0');
+      return response.redirect(
+        303,
+        alphaConfirmationRedirect('invalid'),
+      );
     }
 
     const result = await db.query(
@@ -380,8 +393,8 @@ app.get('/api/v1/alpha/confirm', async (request, response, next) => {
     return response.redirect(
       303,
       result.rowCount > 0
-        ? '/pages/alpha/?confirmed=1'
-        : '/pages/alpha/?confirmed=0',
+        ? alphaConfirmationRedirect('confirmed')
+        : alphaConfirmationRedirect('invalid'),
     );
   } catch (error) {
     return next(error);
@@ -668,10 +681,23 @@ app.use((_request, response) => {
   });
 });
 
-app.use((error, _request, response, _next) => {
-  console.error('Unhandled API error.');
+app.use((error, request, response, _next) => {
+  const isInvalidJson = error.type === 'entity.parse.failed';
 
-  response.status(500).json({
+  if (isInvalidJson) {
+    return response.status(400).json({
+      error: 'Invalid JSON request body.',
+    });
+  }
+
+  console.error('Unhandled API error:', {
+    method: request.method,
+    path: request.originalUrl,
+    code: error.code,
+    message: error.message,
+  });
+
+  return response.status(500).json({
     error: 'Internal server error.',
   });
 });
@@ -684,17 +710,17 @@ const start = async () => {
   });
 
   mailer.verify()
-  .then(() => {
-    console.log('SMTP connection verified.');
-  })
-  .catch((error) => {
-    console.error('SMTP connection could not be verified:', {
-      code: error.code,
-      command: error.command,
-      responseCode: error.responseCode,
-      message: error.message,
+    .then(() => {
+      console.log('SMTP connection verified.');
+    })
+    .catch((error) => {
+      console.error('SMTP connection could not be verified:', {
+        code: error.code,
+        command: error.command,
+        responseCode: error.responseCode,
+        message: error.message,
+      });
     });
-  });
 };
 
 const shutdown = async () => {
@@ -705,7 +731,11 @@ const shutdown = async () => {
 process.on('SIGTERM', shutdown);
 process.on('SIGINT', shutdown);
 
-start().catch(() => {
-  console.error('API startup failed.');
+start().catch((error) => {
+  console.error('API startup failed:', {
+    code: error.code,
+    message: error.message,
+  });
+
   process.exit(1);
 });
