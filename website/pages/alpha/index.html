@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+    >
+
+    <meta
+      name="description"
+      content="Melde dich für die LokApp Alpha an und hilf dabei, die App für Modellbahnsammler besser zu machen."
+      data-i18n-content="alphaPage.metaDescription"
+    >
+
+    <meta name="theme-color" content="#0F172A">
+
+    <title data-i18n="alphaPage.metaTitle">
+      Für LokApp Alpha anmelden – LokApp
+    </title>
+
+    <link rel="stylesheet" href="../../css/tokens.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/sections.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/legal-pages.css">
+
+    <script src="../../js/i18n.js" defer></script>
+    <script src="../../js/theme.js" defer></script>
+    <script src="../../js/mobile-menu.js" defer></script>
+    <script src="../../js/alpha-form.js" defer></script>
+    <script src="../../js/main.js" defer></script>
+  </head>
+
+  <body>
+    <a
+      class="visually-hidden"
+      href="#main-content"
+      data-i18n="accessibility.skipToContent"
+    >
+      Zum Inhalt springen
+    </a>
+
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner container">
+        <div class="site-header__left">
+          <a
+            class="wordmark"
+            href="../../"
+            aria-label="LokApp Startseite"
+            data-i18n-aria-label="accessibility.home"
+          >
+            <span class="wordmark__mark" aria-hidden="true">L</span>
+            <span class="wordmark__text">LokApp</span>
+          </a>
+        </div>
+
+        <div class="site-header__right">
+          <nav
+            class="site-nav"
+            aria-label="Hauptnavigation"
+            data-i18n-aria-label="accessibility.mainNavigation"
+          >
+            <a
+              class="site-nav__link"
+              href="../../#start"
+              data-i18n="navigation.home"
+            >
+              Startseite
+            </a>
+
+            <a
+              class="site-nav__link"
+              href="../../#funktionen"
+              data-i18n="navigation.features"
+            >
+              Funktionen
+            </a>
+
+            <a
+              class="site-nav__link"
+              href="../../#roadmap"
+              data-i18n="navigation.roadmap"
+            >
+              Roadmap
+            </a>
+          </nav>
+
+          <div class="header-actions">
+            <div class="header-actions__desktop">
+              <div class="language-select">
+                <button
+                  class="language-select__trigger"
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  aria-label="Sprache auswählen"
+                  data-language-trigger
+                  data-i18n-aria-label="accessibility.selectLanguage"
+                >
+                  <span data-language-current>DE</span>
+
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="m7 10 5 5 5-5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  class="language-select__menu"
+                  hidden
+                  data-language-menu
+                >
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="de"
+                    data-i18n="language.de"
+                  >
+                    Deutsch
+                  </button>
+
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="en"
+                    data-i18n="language.en"
+                  >
+                    English
+                  </button>
+
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="nl"
+                    data-i18n="language.nl"
+                  >
+                    Nederlands
+                  </button>
+
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="es"
+                    data-i18n="language.es"
+                  >
+                    Español
+                  </button>
+                </div>
+              </div>
+
+              <button
+                class="theme-switch"
+                type="button"
+                aria-label="Light Mode aktivieren"
+                aria-pressed="true"
+                data-theme-toggle
+              >
+                <span class="theme-switch__thumb" aria-hidden="true">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M20.7 15.3A8.5 8.5 0 0 1 8.7 3.3 8.5 8.5 0 1 0 20.7 15.3Z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
+              </button>
+
+              <a
+                class="button button--primary button--compact"
+                href="./"
+                aria-current="page"
+                data-i18n="navigation.alpha"
+              >
+                Für Alpha anmelden
+              </a>
+            </div>
+
+            <div class="header-actions__mobile">
+              <a
+                class="button button--primary button--compact"
+                href="./"
+                aria-current="page"
+                data-i18n="alphaPage.mobileAlpha"
+              >
+                Alpha
+              </a>
+
+              <button
+                class="icon-button"
+                type="button"
+                aria-label="Menü öffnen"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+                data-mobile-menu-toggle
+              >
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 7h16M4 12h16M4 17h16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <nav
+      id="mobile-navigation"
+      class="mobile-navigation"
+      aria-label="Mobile Navigation"
+      data-mobile-navigation
+      data-i18n-aria-label="accessibility.mobileNavigation"
+    >
+      <div class="mobile-navigation__inner">
+        <div class="mobile-navigation__content container">
+          <a
+            class="mobile-navigation__link"
+            href="../../#start"
+            data-i18n="navigation.home"
+          >
+            Startseite
+          </a>
+
+          <a
+            class="mobile-navigation__link"
+            href="../../#funktionen"
+            data-i18n="navigation.features"
+          >
+            Funktionen
+          </a>
+
+          <a
+            class="mobile-navigation__link"
+            href="../../#roadmap"
+            data-i18n="navigation.roadmap"
+          >
+            Roadmap
+          </a>
+
+          <a
+            class="mobile-navigation__link"
+            href="./"
+            aria-current="page"
+            data-i18n="navigation.alpha"
+          >
+            Für Alpha anmelden
+          </a>
+
+          <div class="mobile-navigation__divider"></div>
+
+          <button
+            class="mobile-navigation__link"
+            type="button"
+            data-theme-toggle
+            data-i18n="theme.switch"
+          >
+            Dark / Light wechseln
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main id="main-content" class="site-main">
+      <section class="alpha-page">
+        <div class="container">
+          <div class="alpha-page__header">
+            <p
+              class="section-eyebrow"
+              data-i18n="alphaPage.eyebrow"
+            >
+              LokApp Alpha
+            </p>
+
+            <h1
+              class="section-title"
+              data-i18n="alphaPage.title"
+            >
+              Sei früh dabei und gestalte LokApp mit.
+            </h1>
+
+            <p
+              class="section-description"
+              data-i18n="alphaPage.description"
+            >
+              Teste LokApp vor dem öffentlichen Start und hilf mit ehrlichem
+              Feedback dabei, die App für Modellbahnsammler besser zu machen.
+            </p>
+          </div>
+
+          <div class="alpha-page__layout">
+            <article class="card alpha-form-card">
+              <form class="alpha-form" data-alpha-form novalidate>
+                <div class="alpha-form__field">
+                  <label
+                    class="alpha-form__label"
+                    for="email"
+                    data-i18n="alphaPage.emailLabel"
+                  >
+                    E-Mail-Adresse
+                  </label>
+
+                  <input
+                    id="email"
+                    class="alpha-form__input"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder="name@example.com"
+                    required
+                  >
+                </div>
+
+                <div class="alpha-form__field">
+                  <label
+                    class="alpha-form__label"
+                    for="platform"
+                    data-i18n="alphaPage.platformLabel"
+                  >
+                    Auf welcher Plattform möchtest du LokApp testen?
+                  </label>
+
+                  <select
+                    id="platform"
+                    class="alpha-form__input"
+                    name="platform"
+                    required
+                  >
+                    <option
+                      value=""
+                      selected
+                      disabled
+                      data-i18n="alphaPage.platformPlaceholder"
+                    >
+                      Bitte auswählen
+                    </option>
+
+                    <option
+                      value="ios"
+                      data-i18n="alphaPage.platformIos"
+                    >
+                      iPhone / iPad
+                    </option>
+
+                    <option
+                      value="android"
+                      data-i18n="alphaPage.platformAndroid"
+                    >
+                      Android
+                    </option>
+
+                    <option
+                      value="multiple"
+                      data-i18n="alphaPage.platformMultiple"
+                    >
+                      Mehrere Plattformen
+                    </option>
+                  </select>
+                </div>
+
+                <label class="alpha-form__checkbox-row">
+                  <input
+                    class="alpha-form__checkbox"
+                    name="privacy"
+                    type="checkbox"
+                    required
+                  >
+
+                  <span>
+                    <span data-i18n="alphaPage.privacyBefore">
+                      Ich habe die
+                    </span>
+
+                    <a
+                      href="../datenschutz/"
+                      data-i18n="footer.privacy"
+                    >
+                      Datenschutzerklärung
+                    </a>
+
+                    <span data-i18n="alphaPage.privacyAfter">
+                      gelesen und stimme der Verarbeitung meiner Angaben für die
+                      Alpha-Anmeldung zu.
+                    </span>
+                  </span>
+                </label>
+
+                <button
+                  class="button button--primary"
+                  type="submit"
+                >
+                  <span data-i18n="alphaPage.submit">
+                    Interesse an Alpha anmelden
+                  </span>
+
+                  <span aria-hidden="true">→</span>
+                </button>
+
+                <p
+                  class="alpha-form__feedback"
+                  hidden
+                  aria-live="polite"
+                  data-alpha-feedback
+                ></p>
+              </form>
+            </article>
+
+            <aside
+              class="alpha-info"
+              aria-label="Informationen zur Alpha"
+              data-i18n-aria-label="alphaPage.infoLabel"
+            >
+              <article class="card alpha-info__card">
+                <div class="alpha-info__icon" aria-hidden="true">01</div>
+
+                <h2
+                  class="alpha-info__title"
+                  data-i18n="alphaPage.cardOneTitle"
+                >
+                  Früh testen
+                </h2>
+
+                <p
+                  class="alpha-info__text"
+                  data-i18n="alphaPage.cardOneText"
+                >
+                  Du bekommst LokApp vor dem öffentlichen Start und kannst die
+                  wichtigsten Bereiche mit deiner eigenen Sammlung ausprobieren.
+                </p>
+              </article>
+
+              <article class="card alpha-info__card">
+                <div class="alpha-info__icon" aria-hidden="true">02</div>
+
+                <h2
+                  class="alpha-info__title"
+                  data-i18n="alphaPage.cardTwoTitle"
+                >
+                  Direkt Feedback geben
+                </h2>
+
+                <p
+                  class="alpha-info__text"
+                  data-i18n="alphaPage.cardTwoText"
+                >
+                  Sag uns, was sich gut anfühlt, was fehlt und was bei einer
+                  echten Sammlung wirklich praktisch wäre.
+                </p>
+              </article>
+
+              <article class="card alpha-info__card">
+                <div class="alpha-info__icon" aria-hidden="true">03</div>
+
+                <h2
+                  class="alpha-info__title"
+                  data-i18n="alphaPage.cardThreeTitle"
+                >
+                  Keine Verpflichtung
+                </h2>
+
+                <p
+                  class="alpha-info__text"
+                  data-i18n="alphaPage.cardThreeText"
+                >
+                  Die Alpha ist freiwillig. Du kannst jederzeit entscheiden,
+                  ob du weiter testen oder keine weiteren Informationen
+                  erhalten möchtest.
+                </p>
+              </article>
+            </aside>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="site-footer__inner container">
+        <div class="site-footer__brand">
+          <a
+            class="wordmark"
+            href="../../"
+            aria-label="LokApp Startseite"
+            data-i18n-aria-label="accessibility.home"
+          >
+            <span class="wordmark__mark" aria-hidden="true">L</span>
+            <span class="wordmark__text">LokApp</span>
+          </a>
+
+          <p
+            class="site-footer__description"
+            data-i18n="footer.description"
+          >
+            LokApp ist ein Produkt von Schenk Software.
+          </p>
+
+          <p
+            class="site-footer__legal"
+            data-i18n="footer.rights"
+          >
+            © 2026 Schenk Software. Alle Rechte vorbehalten.
+          </p>
+        </div>
+
+        <nav
+          class="site-footer__links"
+          aria-label="Footer Navigation"
+          data-i18n-aria-label="footer.navigation"
+        >
+          <a
+            class="site-footer__link"
+            href="../impressum/"
+            data-i18n="footer.imprint"
+          >
+            Impressum
+          </a>
+
+          <a
+            class="site-footer__link"
+            href="../datenschutz/"
+            data-i18n="footer.privacy"
+          >
+            Datenschutz
+          </a>
+
+          <a
+            class="site-footer__link"
+            href="../agb/"
+            data-i18n="footer.terms"
+          >
+            AGB
+          </a>
+
+          <a
+            class="site-footer__link"
+            href="https://schenk-software.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="footer.company"
+          >
+            Schenk Software
+          </a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

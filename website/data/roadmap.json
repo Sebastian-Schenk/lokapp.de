@@ -1,0 +1,72 @@
+[
+  {
+    "id": "idea",
+    "date": "2025",
+    "status": "completed",
+    "title": "Die Idee entsteht",
+    "summary": "Aus einer echten Modellbahnsammlung entsteht LokApp.",
+    "details": "Viele Informationen zu Loks, Wagen, Gebäuden und Zubehör lagen verteilt in Listen, Fotos, Excel-Dateien und Erinnerungen. Daraus entstand die Idee für eine moderne, einfache Sammlungs-App.",
+    "isVisibleOnHome": true,
+    "order": 1
+  },
+  {
+    "id": "foundation",
+    "date": "Ende 2025",
+    "status": "completed",
+    "title": "Erste App-Grundlage",
+    "summary": "Kategorien, Modelle und erste Datenstrukturen nehmen Form an.",
+    "details": "Die technische Grundlage für LokApp entsteht: Modelle, Kategorien, Typen, Bilder und grundlegende Informationen werden strukturiert gespeichert.",
+    "isVisibleOnHome": false,
+    "order": 2
+  },
+  {
+    "id": "core-features",
+    "date": "Frühjahr 2026",
+    "status": "completed",
+    "title": "Sammlung und Suche",
+    "summary": "Die wichtigsten Bereiche für die tägliche Nutzung werden aufgebaut.",
+    "details": "Sammlung, Kategorien, Fotos, Suche, Filter und unterschiedliche Ansichten werden aufgebaut, damit auch größere Sammlungen übersichtlich bleiben.",
+    "isVisibleOnHome": true,
+    "order": 3
+  },
+  {
+    "id": "alpha",
+    "date": "Jetzt",
+    "status": "current",
+    "title": "Alpha-Phase",
+    "summary": "Stabilität, Feedback und echte Sammlungen stehen im Fokus.",
+    "details": "In der Alpha wird LokApp mit ersten Sammlern getestet. Dabei geht es um ehrliches Feedback, Fehlerbehebung, Verständlichkeit und Funktionen, die im Alltag wirklich gebraucht werden.",
+    "isVisibleOnHome": true,
+    "order": 4
+  },
+  {
+    "id": "customization",
+    "date": "Geplant",
+    "status": "planned",
+    "title": "Mehr Individualisierung",
+    "summary": "Eigene Bereiche, Attribute und neue Sammler-Workflows.",
+    "details": "Sammler sollen LokApp künftig stärker an ihre eigene Sammlung, Kategorien und Arbeitsweise anpassen können.",
+    "isVisibleOnHome": true,
+    "order": 5
+  },
+  {
+    "id": "multiple-images",
+    "date": "Geplant",
+    "status": "planned",
+    "title": "Mehr Bilder und Details",
+    "summary": "Besondere Merkmale und mehrere Ansichten eines Modells festhalten.",
+    "details": "Mehrere Bilder pro Modell, eine bessere Bildverwaltung und weitere Detailinformationen sollen die Dokumentation einer Sammlung verbessern.",
+    "isVisibleOnHome": false,
+    "order": 6
+  },
+  {
+    "id": "cloud-sync",
+    "date": "In Vorbereitung",
+    "status": "future",
+    "title": "Cloud und mehrere Geräte",
+    "summary": "Deine Sammlung auf mehreren Geräten verfügbar machen.",
+    "details": "Cloud-Synchronisation ist geplant, wird aber erst umgesetzt, wenn die lokale Grundlage, Datensicherheit und Alpha-Phase stabil genug sind.",
+    "isVisibleOnHome": true,
+    "order": 7
+  }
+]

@@ -1,0 +1,68 @@
+{
+  "activePoll": {
+    "id": "next-feature-2026-01",
+    "status": "preview",
+    "resultsAvailable": false,
+    "question": "Welche Funktion wäre für dich als Nächstes am wichtigsten?",
+    "hint": "Wähle die Funktion, die dir am wichtigsten ist. Deine Auswahl wird nur lokal in deinem Browser gespeichert und nicht an uns übertragen.",
+    "storageKey": "lokapp-active-poll-vote",
+    "disclaimer": "Eine gemeinsame Community-Abstimmung mit sichtbaren Ergebnissen ist in Vorbereitung.",
+    "options": [
+      {
+        "id": "type-defaults",
+        "title": "Type Defaults",
+        "description": "Wiederkehrende Werte für bestimmte Modelltypen schneller übernehmen.",
+        "details": "Lege für bestimmte Lok-, Wagen- oder Gebäudetypen Standardwerte fest, damit neue Modelle schneller angelegt werden können.",
+        "icon": "settings",
+        "order": 1
+      },
+      {
+        "id": "multiple-images",
+        "title": "Mehrere Bilder pro Modell",
+        "description": "Mehr Ansichten, Details und besondere Merkmale direkt festhalten.",
+        "details": "Speichere mehrere Fotos pro Modell, etwa Seitenansichten, Verpackung, Beschriftung oder besondere Details.",
+        "icon": "images",
+        "order": 2
+      },
+      {
+        "id": "search",
+        "title": "Erweiterte Suche und Filter",
+        "description": "Deine Sammlung schneller nach Nummern, Typen oder Eigenschaften durchsuchen.",
+        "details": "Nutze genauere Filter, um Modelle nach Nummern, Kategorien, Typen, Epochen oder eigenen Eigenschaften schneller zu finden.",
+        "icon": "search",
+        "order": 3
+      },
+      {
+        "id": "custom-fields",
+        "title": "Eigene Bereiche und Attribute",
+        "description": "LokApp stärker an deine eigene Sammlung und Arbeitsweise anpassen.",
+        "details": "Erstelle eigene Felder und Bereiche für Informationen, die speziell für deine persönliche Sammlung wichtig sind.",
+        "icon": "plus",
+        "order": 4
+      }
+    ]
+  },
+  "upcomingHighlights": [
+    {
+      "id": "search-priority",
+      "title": "Schnellere Sammlungssuche",
+      "status": "in_preparation",
+      "statusLabel": "In Vorbereitung",
+      "description": "Suche und Filter werden weiter verbessert, damit Modelle auch in größeren Sammlungen schnell gefunden werden."
+    },
+    {
+      "id": "multiple-images-priority",
+      "title": "Mehr Bilder pro Modell",
+      "status": "in_progress",
+      "statusLabel": "In Arbeit",
+      "description": "Mehrere Ansichten und Details sollen künftig direkt einem Modell zugeordnet werden können."
+    },
+    {
+      "id": "custom-attributes-priority",
+      "title": "Eigene Attribute",
+      "status": "planned",
+      "statusLabel": "Geplant",
+      "description": "Sammler sollen zusätzliche Informationen passend zu ihrer eigenen Sammlung anlegen können."
+    }
+  ]
+}

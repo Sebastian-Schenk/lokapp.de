@@ -1,0 +1,63 @@
+services:
+  web:
+    image: nginx:1.27-alpine
+    container_name: lokapp-web
+    restart: unless-stopped
+
+    volumes:
+      - ./website:/usr/share/nginx/html:ro
+      - ./infra/nginx/default.conf:/etc/nginx/conf.d/default.conf:ro
+
+    networks:
+      internal:
+      proxy-net:
+        aliases:
+          - lokapp-web
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - wget -qO- http://127.0.0.1/ > /dev/null 2>&1
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  api:
+    build:
+      context: ./api
+      dockerfile: Dockerfile
+
+    container_name: lokapp-web-api
+    restart: unless-stopped
+
+    env_file:
+      - .env
+
+    expose:
+      - "3000"
+
+    networks:
+      internal:
+      proxy-net:
+      mailcow-network:
+
+    healthcheck:
+      test:
+        - CMD-SHELL
+        - node -e "fetch('http://127.0.0.1:3000/api/health').then((response) => process.exit(response.ok ? 0 : 1)).catch(() => process.exit(1))"
+      interval: 30s
+      timeout: 8s
+      retries: 3
+      start_period: 15s
+
+networks:
+  internal:
+    driver: bridge
+
+  proxy-net:
+    external: true
+    name: proxy-net
+
+  mailcow-network:
+    external: true
+    name: mailcowdockerized_mailcow-network

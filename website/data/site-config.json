@@ -1,0 +1,31 @@
+{
+  "siteName": "LokApp",
+  "companyName": "Schenk Software",
+  "copyrightYear": 2026,
+  "defaultLocale": "de",
+  "supportedLocales": [
+    "de"
+  ],
+  "theme": {
+    "default": "dark",
+    "storageKey": "lokapp-theme"
+  },
+  "links": {
+    "home": "./",
+    "alpha": "pages/alpha/",
+    "roadmap": "pages/roadmap/",
+    "polls": "pages/umfragen/",
+    "subscription": "pages/abo/",
+    "imprint": "pages/impressum/",
+    "privacy": "pages/datenschutz/",
+    "terms": "pages/agb/",
+    "company": "https://schenk-software.de"
+  },
+  "alpha": {
+    "isOpen": false,
+    "headline": "Alpha startet bald"
+  },
+  "subscription": {
+    "isPublic": false
+  }
+}

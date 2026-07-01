@@ -1,0 +1,50 @@
+[
+  {
+    "id": "collection",
+    "title": "Deine Sammlung an einem Ort",
+    "description": "Loks, Wagen, Gebäude und Zubehör übersichtlich verwalten.",
+    "icon": "collection",
+    "status": "available",
+    "order": 1
+  },
+  {
+    "id": "photos-details",
+    "title": "Fotos und Details",
+    "description": "Wichtige Informationen und Bilder direkt am Modell speichern.",
+    "icon": "image",
+    "status": "available",
+    "order": 2
+  },
+  {
+    "id": "search",
+    "title": "Schnell finden",
+    "description": "Durchsuche deine Sammlung auch unterwegs auf Börsen oder bei Freunden.",
+    "icon": "search",
+    "status": "available",
+    "order": 3
+  },
+  {
+    "id": "custom-attributes",
+    "title": "Eigene Attribute",
+    "description": "Passe LokApp mit zusätzlichen Informationen an deine Sammlung an.",
+    "icon": "attributes",
+    "status": "planned",
+    "order": 4
+  },
+  {
+    "id": "multiple-images",
+    "title": "Mehrere Bilder pro Modell",
+    "description": "Halte verschiedene Ansichten, Details und Besonderheiten eines Modells fest.",
+    "icon": "images",
+    "status": "planned",
+    "order": 5
+  },
+  {
+    "id": "cloud-sync",
+    "title": "Cloud-Synchronisation",
+    "description": "Nutze deine Sammlung später auf mehreren Geräten.",
+    "icon": "cloud",
+    "status": "planned",
+    "order": 6
+  }
+]
