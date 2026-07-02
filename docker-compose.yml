@@ -7,6 +7,12 @@ services:
     container_name: lokapp-web
     restart: unless-stopped
 
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "7"
+
     networks:
       proxy-net:
         aliases:
@@ -19,6 +25,12 @@ services:
 
     container_name: lokapp-web-api
     restart: unless-stopped
+
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "7"
 
     environment:
       NODE_ENV: production

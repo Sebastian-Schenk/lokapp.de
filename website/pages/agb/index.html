@@ -1,18 +1,28 @@
 <!doctype html>
+<!--
+  Titelwahl: Diese Seite heißt inhaltlich "Nutzungsbedingungen für Website und Alpha"
+  statt "AGB". Grund: Es gibt aktuell keinen kostenpflichtigen Vertrag (keine App-Abos,
+  keine Zahlungen) – geregelt werden nur die Website-Nutzung und die freiwillige
+  Alpha-Teilnahme. "Nutzungsbedingungen" ist dafür präziser als "AGB".
+  Der URL-Pfad /agb/ und das Footer-Label "AGB" bleiben unverändert, damit bestehende
+  Links und die Navigation auf allen Seiten funktionieren.
+-->
 <html lang="de" data-theme="dark">
   <head>
     <meta charset="utf-8">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta
       name="description"
-      content="Allgemeine Geschäftsbedingungen für LokApp."
+      content="Nutzungsbedingungen für die Website lokapp.de und die LokApp Alpha."
+      data-i18n-content="termsPage.metaDescription"
     >
+
     <meta name="theme-color" content="#0F172A">
 
-    <title>AGB – LokApp</title>
+    <title data-i18n="termsPage.metaTitle">
+      Nutzungsbedingungen für Website und Alpha – LokApp
+    </title>
 
     <link rel="stylesheet" href="../../css/tokens.css">
     <link rel="stylesheet" href="../../css/reset.css">
@@ -23,6 +33,7 @@
     <link rel="stylesheet" href="../../css/responsive.css">
     <link rel="stylesheet" href="../../css/legal-pages.css">
 
+    <script src="../../js/i18n.js" defer></script>
     <script src="../../js/theme.js" defer></script>
     <script src="../../js/mobile-menu.js" defer></script>
     <script src="../../js/section-navigation.js" defer></script>
@@ -30,7 +41,11 @@
   </head>
 
   <body>
-    <a class="visually-hidden" href="#main-content">
+    <a
+      class="skip-link"
+      href="#main-content"
+      data-i18n="accessibility.skipToContent"
+    >
       Zum Inhalt springen
     </a>
 
@@ -40,6 +55,7 @@
           <a
             class="wordmark"
             href="../../"
+            data-i18n-aria-label="accessibility.home"
             aria-label="LokApp Startseite"
           >
             <span class="wordmark__mark" aria-hidden="true">L</span>
@@ -48,22 +64,110 @@
         </div>
 
         <div class="site-header__right">
-          <nav class="site-nav" aria-label="Hauptnavigation">
-            <a class="site-nav__link" href="../../#startseite">
+          <nav
+            class="site-nav"
+            data-i18n-aria-label="accessibility.mainNavigation"
+            aria-label="Hauptnavigation"
+          >
+            <a
+              class="site-nav__link"
+              href="../../#start"
+              data-i18n="navigation.home"
+            >
               Startseite
             </a>
 
-            <a class="site-nav__link" href="../../#features">
-              Features
+            <a
+              class="site-nav__link"
+              href="../../#funktionen"
+              data-i18n="navigation.features"
+            >
+              Funktionen
             </a>
 
-            <a class="site-nav__link" href="../roadmap/">
+            <a
+              class="site-nav__link"
+              href="../../#roadmap"
+              data-i18n="navigation.roadmap"
+            >
               Roadmap
             </a>
           </nav>
 
           <div class="header-actions">
             <div class="header-actions__desktop">
+              <div class="language-select">
+                <button
+                  class="language-select__trigger"
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  data-language-trigger
+                  data-i18n-aria-label="accessibility.selectLanguage"
+                  aria-label="Sprache auswählen"
+                >
+                  <span data-language-current>DE</span>
+
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="m7 10 5 5 5-5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  class="language-select__menu"
+                  hidden
+                  data-language-menu
+                >
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="de"
+                    data-i18n="language.de"
+                  >
+                    Deutsch
+                  </button>
+
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="en"
+                    data-i18n="language.en"
+                  >
+                    English
+                  </button>
+
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="nl"
+                    data-i18n="language.nl"
+                  >
+                    Nederlands
+                  </button>
+
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="es"
+                    data-i18n="language.es"
+                  >
+                    Español
+                  </button>
+                </div>
+              </div>
+
               <button
                 class="theme-switch"
                 type="button"
@@ -92,6 +196,7 @@
               <a
                 class="button button--primary button--compact"
                 href="../alpha/"
+                data-i18n="navigation.alpha"
               >
                 Für Alpha anmelden
               </a>
@@ -101,8 +206,9 @@
               <a
                 class="button button--primary button--compact"
                 href="../alpha/"
+                data-i18n="navigation.alpha"
               >
-                Alpha
+                Für Alpha anmelden
               </a>
 
               <button
@@ -137,28 +243,41 @@
     <nav
       id="mobile-navigation"
       class="mobile-navigation"
-      aria-label="Mobile Navigation"
       data-mobile-navigation
+      data-i18n-aria-label="accessibility.mobileNavigation"
+      aria-label="Mobile Navigation"
     >
       <div class="mobile-navigation__inner">
         <div class="mobile-navigation__content container">
-          <a class="mobile-navigation__link" href="../../#startseite">
+          <a
+            class="mobile-navigation__link"
+            href="../../#start"
+            data-i18n="navigation.home"
+          >
             Startseite
           </a>
 
-          <a class="mobile-navigation__link" href="../../#features">
-            Features
+          <a
+            class="mobile-navigation__link"
+            href="../../#funktionen"
+            data-i18n="navigation.features"
+          >
+            Funktionen
           </a>
 
-          <a class="mobile-navigation__link" href="../roadmap/">
+          <a
+            class="mobile-navigation__link"
+            href="../../#roadmap"
+            data-i18n="navigation.roadmap"
+          >
             Roadmap
           </a>
 
-          <a class="mobile-navigation__link" href="../umfragen/">
-            Umfragen
-          </a>
-
-          <a class="mobile-navigation__link" href="../alpha/">
+          <a
+            class="mobile-navigation__link"
+            href="../alpha/"
+            data-i18n="navigation.alpha"
+          >
             Für Alpha anmelden
           </a>
 
@@ -168,6 +287,7 @@
             class="mobile-navigation__link"
             type="button"
             data-theme-toggle
+            data-i18n="theme.switch"
           >
             Dark / Light wechseln
           </button>
@@ -180,371 +300,170 @@
         <div class="container legal-page__layout">
           <nav
             class="section-navigation"
-            aria-label="Inhaltsnavigation"
             data-section-navigation
+            data-i18n-aria-label="termsPage.sectionNavigation"
+            aria-label="Inhaltsnavigation"
           >
-            <a
-              class="section-navigation__item"
-              href="#geltungsbereich"
-              aria-current="true"
-              data-section-navigation-link
-            >
+            <a class="section-navigation__item" href="#geltungsbereich" aria-current="true" data-section-navigation-link>
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
-                Geltungsbereich
-              </span>
+              <span class="section-navigation__label" data-i18n="termsPage.navScope">Geltungsbereich</span>
             </a>
-
-            <a
-              class="section-navigation__item"
-              href="#alpha"
-              data-section-navigation-link
-            >
+            <a class="section-navigation__item" href="#gegenstand" data-section-navigation-link>
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
-                Alpha-Phase
-              </span>
+              <span class="section-navigation__label" data-i18n="termsPage.navSubject">Gegenstand der Alpha</span>
             </a>
-
-            <a
-              class="section-navigation__item"
-              href="#nutzung"
-              data-section-navigation-link
-            >
+            <a class="section-navigation__item" href="#teilnahme" data-section-navigation-link>
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
-                Nutzung der App
-              </span>
+              <span class="section-navigation__label" data-i18n="termsPage.navParticipation">Teilnahme</span>
             </a>
-
-            <a
-              class="section-navigation__item"
-              href="#verfuegbarkeit"
-              data-section-navigation-link
-            >
+            <a class="section-navigation__item" href="#feedback" data-section-navigation-link>
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
-                Verfügbarkeit
-              </span>
+              <span class="section-navigation__label" data-i18n="termsPage.navFeedback">Feedback</span>
             </a>
-
-            <a
-              class="section-navigation__item"
-              href="#haftung"
-              data-section-navigation-link
-            >
+            <a class="section-navigation__item" href="#verhalten" data-section-navigation-link>
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
-                Haftung
-              </span>
+              <span class="section-navigation__label" data-i18n="termsPage.navConduct">Verhaltensregeln</span>
             </a>
-
-            <a
-              class="section-navigation__item"
-              href="#aenderungen"
-              data-section-navigation-link
-            >
+            <a class="section-navigation__item" href="#verfuegbarkeit" data-section-navigation-link>
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
-                Änderungen
-              </span>
+              <span class="section-navigation__label" data-i18n="termsPage.navAvailability">Verfügbarkeit</span>
+            </a>
+            <a class="section-navigation__item" href="#haftung" data-section-navigation-link>
+              <span class="section-navigation__line"></span>
+              <span class="section-navigation__label" data-i18n="termsPage.navLiability">Haftung</span>
+            </a>
+            <a class="section-navigation__item" href="#datenschutz" data-section-navigation-link>
+              <span class="section-navigation__line"></span>
+              <span class="section-navigation__label" data-i18n="termsPage.navPrivacy">Datenschutz</span>
+            </a>
+            <a class="section-navigation__item" href="#aenderungen" data-section-navigation-link>
+              <span class="section-navigation__line"></span>
+              <span class="section-navigation__label" data-i18n="termsPage.navChanges">Änderungen</span>
+            </a>
+            <a class="section-navigation__item" href="#recht" data-section-navigation-link>
+              <span class="section-navigation__line"></span>
+              <span class="section-navigation__label" data-i18n="termsPage.navLaw">Anwendbares Recht</span>
             </a>
           </nav>
 
           <div class="legal-page__content">
             <div class="legal-page__intro">
-              <p class="legal-page__eyebrow">Nutzungsbedingungen</p>
-
-              <h1 class="legal-page__title">
-                Allgemeine Geschäftsbedingungen
-              </h1>
-
-              <p class="legal-page__subtitle">
-                Nutzungsbedingungen für LokApp während der Alpha-Phase.
+              <p class="legal-page__eyebrow" data-i18n="termsPage.eyebrow">Rechtliche Angaben</p>
+              <h1 class="legal-page__title" data-i18n="termsPage.title">Nutzungsbedingungen für Website und Alpha</h1>
+              <p class="legal-page__subtitle" data-i18n="termsPage.subtitle">
+                Bedingungen für die Nutzung der Website lokapp.de und die Teilnahme an der LokApp Alpha.
               </p>
-
-              <p class="legal-page__updated">
-                Stand: 1. Juli 2026
-              </p>
+              <p class="legal-page__updated" data-i18n="termsPage.updated">Stand: 1. Juli 2026</p>
             </div>
 
             <details class="legal-mobile-navigation">
-              <summary>Auf dieser Seite</summary>
-
+              <summary data-i18n="termsPage.onThisPage">Auf dieser Seite</summary>
               <nav class="legal-mobile-navigation__links">
-                <a
-                  class="legal-mobile-navigation__link"
-                  href="#geltungsbereich"
-                >
-                  Geltungsbereich
-                </a>
-
-                <a
-                  class="legal-mobile-navigation__link"
-                  href="#alpha"
-                >
-                  Alpha-Phase
-                </a>
-
-                <a
-                  class="legal-mobile-navigation__link"
-                  href="#nutzung"
-                >
-                  Nutzung der App
-                </a>
-
-                <a
-                  class="legal-mobile-navigation__link"
-                  href="#verfuegbarkeit"
-                >
-                  Verfügbarkeit
-                </a>
-
-                <a
-                  class="legal-mobile-navigation__link"
-                  href="#haftung"
-                >
-                  Haftung
-                </a>
-
-                <a
-                  class="legal-mobile-navigation__link"
-                  href="#aenderungen"
-                >
-                  Änderungen
-                </a>
+                <a class="legal-mobile-navigation__link" href="#geltungsbereich" data-i18n="termsPage.navScope">Geltungsbereich</a>
+                <a class="legal-mobile-navigation__link" href="#gegenstand" data-i18n="termsPage.navSubject">Gegenstand der Alpha</a>
+                <a class="legal-mobile-navigation__link" href="#teilnahme" data-i18n="termsPage.navParticipation">Teilnahme</a>
+                <a class="legal-mobile-navigation__link" href="#feedback" data-i18n="termsPage.navFeedback">Feedback</a>
+                <a class="legal-mobile-navigation__link" href="#verhalten" data-i18n="termsPage.navConduct">Verhaltensregeln</a>
+                <a class="legal-mobile-navigation__link" href="#verfuegbarkeit" data-i18n="termsPage.navAvailability">Verfügbarkeit</a>
+                <a class="legal-mobile-navigation__link" href="#haftung" data-i18n="termsPage.navLiability">Haftung</a>
+                <a class="legal-mobile-navigation__link" href="#datenschutz" data-i18n="termsPage.navPrivacy">Datenschutz</a>
+                <a class="legal-mobile-navigation__link" href="#aenderungen" data-i18n="termsPage.navChanges">Änderungen</a>
+                <a class="legal-mobile-navigation__link" href="#recht" data-i18n="termsPage.navLaw">Anwendbares Recht</a>
               </nav>
             </details>
 
-            <section
-              id="geltungsbereich"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                1. Geltungsbereich
-              </h2>
-
+            <section id="geltungsbereich" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.scopeTitle">1. Geltungsbereich</h2>
               <div class="legal-page__section-content">
-                <p>
-                  Diese Allgemeinen Geschäftsbedingungen gelten für die Nutzung
-                  von LokApp, soweit die App im Rahmen einer Alpha- oder
-                  Testphase bereitgestellt wird.
-                </p>
+                <p data-i18n="termsPage.scopeP1">…</p>
+                <p data-i18n="termsPage.scopeP2">…</p>
+                <p data-i18n="termsPage.scopeP3">…</p>
+              </div>
+            </section>
 
-                <p>
-                  Anbieter von LokApp ist Schenk Software, Sebastian Schenk,
-                  [vollständige Anschrift ergänzen].
-                </p>
+            <section id="gegenstand" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.subjectTitle">2. Gegenstand der Alpha-Anmeldung</h2>
+              <div class="legal-page__section-content">
+                <p data-i18n="termsPage.subjectP1">…</p>
+                <p data-i18n="termsPage.subjectP2">…</p>
+              </div>
+            </section>
 
+            <section id="teilnahme" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.participationTitle">3. Teilnahme, Freiwilligkeit und keine Vergütung</h2>
+              <div class="legal-page__section-content">
+                <p data-i18n="termsPage.participationP1">…</p>
+                <p data-i18n="termsPage.participationP2">…</p>
+                <p data-i18n="termsPage.participationP3">…</p>
+                <p data-i18n="termsPage.participationP4">…</p>
+              </div>
+            </section>
+
+            <section id="feedback" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.feedbackTitle">4. Feedback</h2>
+              <div class="legal-page__section-content">
+                <p data-i18n="termsPage.feedbackP1">…</p>
+                <p data-i18n="termsPage.feedbackP2">…</p>
+              </div>
+            </section>
+
+            <section id="verhalten" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.conductTitle">5. Verhaltensregeln</h2>
+              <div class="legal-page__section-content">
+                <p data-i18n="termsPage.conductP1">…</p>
+                <ul>
+                  <li data-i18n="termsPage.conductLi1">…</li>
+                  <li data-i18n="termsPage.conductLi2">…</li>
+                  <li data-i18n="termsPage.conductLi3">…</li>
+                </ul>
+                <p data-i18n="termsPage.conductP2">…</p>
+              </div>
+            </section>
+
+            <section id="verfuegbarkeit" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.availabilityTitle">6. Verfügbarkeit und Weiterentwicklung</h2>
+              <div class="legal-page__section-content">
+                <p data-i18n="termsPage.availabilityP1">…</p>
+                <p data-i18n="termsPage.availabilityP2">…</p>
+              </div>
+            </section>
+
+            <section id="haftung" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.liabilityTitle">7. Haftung</h2>
+              <div class="legal-page__section-content">
+                <p data-i18n="termsPage.liabilityP1">…</p>
+                <p data-i18n="termsPage.liabilityP2">…</p>
+                <p data-i18n="termsPage.liabilityP3">…</p>
+                <p data-i18n="termsPage.liabilityP4">…</p>
+              </div>
+            </section>
+
+            <section id="datenschutz" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.privacyTitle">8. Datenschutz</h2>
+              <div class="legal-page__section-content">
+                <p data-i18n="termsPage.privacyP1">…</p>
                 <p>
-                  Abweichende Bedingungen von Nutzern gelten nur, wenn sie
-                  ausdrücklich in Textform bestätigt wurden.
+                  <a href="../datenschutz/" data-i18n="termsPage.privacyLink">Zur Datenschutzerklärung</a>
                 </p>
               </div>
             </section>
 
-            <section
-              id="alpha"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                2. Alpha-Phase
-              </h2>
-
+            <section id="aenderungen" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.changesTitle">9. Änderungen dieser Bedingungen</h2>
               <div class="legal-page__section-content">
-                <p>
-                  LokApp befindet sich in einer frühen Entwicklungsphase. Die
-                  App kann Fehler enthalten, sich technisch verändern oder
-                  einzelne Funktionen können vorübergehend nicht verfügbar sein.
-                </p>
-
-                <p>
-                  Die Teilnahme an der Alpha erfolgt freiwillig. Ein Anspruch
-                  auf Teilnahme, dauerhafte Bereitstellung, bestimmte Funktionen
-                  oder einen späteren öffentlichen Zugang besteht nicht.
-                </p>
-
-                <p>
-                  Rückmeldungen, Fehlerberichte und Verbesserungsvorschläge sind
-                  willkommen. Sie begründen jedoch keinen Anspruch auf
-                  Umsetzung.
-                </p>
+                <p data-i18n="termsPage.changesP1">…</p>
+                <p data-i18n="termsPage.changesP2">…</p>
               </div>
             </section>
 
-            <section
-              id="nutzung"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                3. Nutzung der App
-              </h2>
-
+            <section id="recht" class="legal-page__section">
+              <h2 class="legal-page__section-title" data-i18n="termsPage.lawTitle">10. Anwendbares Recht und Schlussbestimmungen</h2>
               <div class="legal-page__section-content">
-                <p>
-                  LokApp dient der persönlichen Verwaltung und Dokumentation
-                  von Modellbahnsammlungen.
-                </p>
-
-                <p>
-                  Nutzer sind dafür verantwortlich, nur Inhalte zu speichern,
-                  zu verwenden oder hochzuladen, für die sie die erforderlichen
-                  Rechte besitzen.
-                </p>
-
-                <p>
-                  Es ist insbesondere nicht erlaubt, LokApp für rechtswidrige
-                  Zwecke, zur Verbreitung schädlicher Inhalte oder zur
-                  Beeinträchtigung der technischen Infrastruktur zu verwenden.
-                </p>
+                <p data-i18n="termsPage.lawP1">…</p>
+                <p data-i18n="termsPage.lawP2">…</p>
+                <p data-i18n="termsPage.lawP3">…</p>
               </div>
             </section>
-
-            <section
-              id="daten"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                4. Eigene Daten und Datensicherung
-              </h2>
-
-              <div class="legal-page__section-content">
-                <p>
-                  Nutzer bleiben für die von ihnen eingegebenen Inhalte
-                  verantwortlich.
-                </p>
-
-                <p>
-                  Während der Alpha-Phase kann es zu Änderungen, Fehlern,
-                  Zurücksetzungen oder unvorhergesehenen Einschränkungen kommen.
-                  Wichtige Daten sollten daher zusätzlich gesichert werden.
-                </p>
-
-                <p>
-                  Sobald Export-, Backup- oder Cloud-Funktionen bereitgestellt
-                  werden, gelten ergänzende Hinweise innerhalb der App oder auf
-                  der Website.
-                </p>
-              </div>
-            </section>
-
-            <section
-              id="verfuegbarkeit"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                5. Verfügbarkeit und Weiterentwicklung
-              </h2>
-
-              <div class="legal-page__section-content">
-                <p>
-                  LokApp wird im Rahmen der technischen und betrieblichen
-                  Möglichkeiten bereitgestellt.
-                </p>
-
-                <p>
-                  Wartungen, Updates, Sicherheitsmaßnahmen oder technische
-                  Weiterentwicklungen können dazu führen, dass einzelne
-                  Funktionen zeitweise eingeschränkt oder nicht verfügbar sind.
-                </p>
-
-                <p>
-                  LokApp kann während der Alpha-Phase verändert, erweitert,
-                  eingeschränkt oder eingestellt werden, soweit dies unter
-                  Berücksichtigung der berechtigten Interessen der Nutzer
-                  angemessen ist.
-                </p>
-              </div>
-            </section>
-
-            <section
-              id="haftung"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                6. Haftung
-              </h2>
-
-              <div class="legal-page__section-content">
-                <p>
-                  Schenk Software haftet unbeschränkt bei Vorsatz und grober
-                  Fahrlässigkeit sowie bei Schäden aus der Verletzung des
-                  Lebens, des Körpers oder der Gesundheit.
-                </p>
-
-                <p>
-                  Bei leicht fahrlässiger Verletzung wesentlicher Vertragspflichten
-                  ist die Haftung auf den vertragstypischen, vorhersehbaren
-                  Schaden begrenzt.
-                </p>
-
-                <p>
-                  Im Übrigen ist eine Haftung für leicht fahrlässig verursachte
-                  Schäden ausgeschlossen, soweit gesetzlich zulässig.
-                </p>
-
-                <p>
-                  Gesetzliche Ansprüche, insbesondere zwingende Rechte von
-                  Verbrauchern bei digitalen Produkten, bleiben unberührt.
-                </p>
-              </div>
-            </section>
-
-            <section
-              id="aenderungen"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                7. Änderungen dieser Bedingungen
-              </h2>
-
-              <div class="legal-page__section-content">
-                <p>
-                  Diese Bedingungen können angepasst werden, wenn sich LokApp,
-                  gesetzliche Anforderungen oder technische Abläufe verändern.
-                </p>
-
-                <p>
-                  Wesentliche Änderungen werden rechtzeitig in geeigneter Form
-                  mitgeteilt, soweit dies erforderlich ist.
-                </p>
-
-                <p>
-                  Für kostenpflichtige Abos, In-App-Käufe oder Cloud-Dienste
-                  werden vor Aktivierung ergänzende Bedingungen erstellt.
-                </p>
-              </div>
-            </section>
-
-            <section
-              id="schlussbestimmungen"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                8. Schlussbestimmungen
-              </h2>
-
-              <div class="legal-page__section-content">
-                <p>
-                  Es gilt das Recht der Bundesrepublik Deutschland unter
-                  Ausschluss des UN-Kaufrechts, soweit dem keine zwingenden
-                  Verbraucherschutzvorschriften entgegenstehen.
-                </p>
-
-                <p>
-                  Sollten einzelne Bestimmungen dieser Bedingungen unwirksam
-                  sein oder werden, bleibt die Wirksamkeit der übrigen
-                  Bestimmungen unberührt.
-                </p>
-              </div>
-            </section>
-
-            <p class="legal-page__note">
-              Diese AGB sind eine technische Vorab-Version für die kostenlose
-              Alpha-Phase. Vor kostenpflichtigen Abos, Cloud-Sync,
-              In-App-Käufen oder öffentlichem Release sollten sie rechtlich
-              geprüft und gezielt erweitert werden.
-            </p>
           </div>
         </div>
       </section>
@@ -553,40 +472,48 @@
     <footer class="site-footer">
       <div class="site-footer__inner container">
         <div class="site-footer__brand">
-          <a class="wordmark" href="../../" aria-label="LokApp Startseite">
+          <a
+            class="wordmark"
+            href="../../"
+            aria-label="LokApp Startseite"
+            data-i18n-aria-label="accessibility.home"
+          >
             <span class="wordmark__mark" aria-hidden="true">L</span>
             <span class="wordmark__text">LokApp</span>
           </a>
 
-          <p class="site-footer__description">
+          <p class="site-footer__description" data-i18n="footer.description">
             LokApp ist ein Produkt von Schenk Software.
           </p>
 
-          <p class="site-footer__legal">
+          <p class="site-footer__legal" data-i18n="footer.rights">
             © 2026 Schenk Software. Alle Rechte vorbehalten.
           </p>
         </div>
 
-        <nav class="site-footer__links" aria-label="Footer Navigation">
-          <a class="site-footer__link" href="../impressum/">
+        <nav
+          class="site-footer__links"
+          aria-label="Footer Navigation"
+          data-i18n-aria-label="footer.navigation"
+        >
+          <a class="site-footer__link" href="../impressum/" data-i18n="footer.imprint">
             Impressum
           </a>
 
-          <a class="site-footer__link" href="../datenschutz/">
+          <a class="site-footer__link" href="../datenschutz/" data-i18n="footer.privacy">
             Datenschutz
           </a>
 
-          <a
-            class="site-footer__link"
-            href="./"
-            aria-current="page"
-          >
+          <a class="site-footer__link" href="./" aria-current="page" data-i18n="footer.terms">
             AGB
           </a>
 
           <a
             class="site-footer__link"
             href="https://schenk-software.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="footer.company"
           >
             Schenk Software
           </a>

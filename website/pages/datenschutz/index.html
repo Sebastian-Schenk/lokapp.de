@@ -2,17 +2,19 @@
 <html lang="de" data-theme="dark">
   <head>
     <meta charset="utf-8">
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    >
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <meta
       name="description"
-      content="Datenschutzerklärung für LokApp und die Website lokapp.de."
+      content="Datenschutzerklärung für die Website lokapp.de."
+      data-i18n-content="privacyPage.metaDescription"
     >
+
     <meta name="theme-color" content="#0F172A">
 
-    <title>Datenschutzerklärung – LokApp</title>
+    <title data-i18n="privacyPage.metaTitle">
+      Datenschutzerklärung – LokApp
+    </title>
 
     <link rel="stylesheet" href="../../css/tokens.css">
     <link rel="stylesheet" href="../../css/reset.css">
@@ -23,6 +25,7 @@
     <link rel="stylesheet" href="../../css/responsive.css">
     <link rel="stylesheet" href="../../css/legal-pages.css">
 
+    <script src="../../js/i18n.js" defer></script>
     <script src="../../js/theme.js" defer></script>
     <script src="../../js/mobile-menu.js" defer></script>
     <script src="../../js/section-navigation.js" defer></script>
@@ -30,287 +33,270 @@
   </head>
 
   <body>
-   <a
-  class="skip-link"
-  href="#main-content"
-  data-i18n="accessibility.skipToContent"
->
-  Zum Inhalt springen
-</a>
+    <a
+      class="skip-link"
+      href="#main-content"
+      data-i18n="accessibility.skipToContent"
+    >
+      Zum Inhalt springen
+    </a>
 
-<header class="site-header" data-site-header>
-  <div class="site-header__inner container">
-    <div class="site-header__left">
-      <a
-        class="wordmark"
-        href="../../"
-        data-i18n-aria-label="accessibility.home"
-        aria-label="LokApp Startseite"
-      >
-        <span class="wordmark__mark" aria-hidden="true">L</span>
-        <span class="wordmark__text">LokApp</span>
-      </a>
-    </div>
+    <header class="site-header" data-site-header>
+      <div class="site-header__inner container">
+        <div class="site-header__left">
+          <a
+            class="wordmark"
+            href="../../"
+            data-i18n-aria-label="accessibility.home"
+            aria-label="LokApp Startseite"
+          >
+            <span class="wordmark__mark" aria-hidden="true">L</span>
+            <span class="wordmark__text">LokApp</span>
+          </a>
+        </div>
 
-    <div class="site-header__right">
-      <nav
-        class="site-nav"
-        data-i18n-aria-label="accessibility.mainNavigation"
-        aria-label="Hauptnavigation"
-      >
-        <a
-          class="site-nav__link"
-          href="../../#start"
-          data-i18n="navigation.home"
-        >
-          Startseite
-        </a>
-
-        <a
-          class="site-nav__link"
-          href="../../#funktionen"
-          data-i18n="navigation.features"
-        >
-          Funktionen
-        </a>
-
-        <a
-          class="site-nav__link"
-          href="../../#roadmap"
-          data-i18n="navigation.roadmap"
-        >
-          Roadmap
-        </a>
-
-        <!--
-        <a
-          class="site-nav__link"
-          href="../../#umfrage"
-          data-i18n="navigation.poll"
-        >
-          Umfrage
-        </a>
-        -->
-      </nav>
-
-      <div class="header-actions">
-        <div class="header-actions__desktop">
-          <div class="language-select">
-            <button
-              class="language-select__trigger"
-              type="button"
-              aria-haspopup="true"
-              aria-expanded="false"
-              data-language-trigger
-              data-i18n-aria-label="accessibility.selectLanguage"
-              aria-label="Sprache auswählen"
+        <div class="site-header__right">
+          <nav
+            class="site-nav"
+            data-i18n-aria-label="accessibility.mainNavigation"
+            aria-label="Hauptnavigation"
+          >
+            <a
+              class="site-nav__link"
+              href="../../#start"
+              data-i18n="navigation.home"
             >
-              <span data-language-current>DE</span>
+              Startseite
+            </a>
 
-              <svg
-                width="16"
-                height="16"
-                viewBox="0 0 24 24"
-                fill="none"
-                aria-hidden="true"
-              >
-                <path
-                  d="m7 10 5 5 5-5"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </button>
-
-            <div
-              class="language-select__menu"
-              hidden
-              data-language-menu
+            <a
+              class="site-nav__link"
+              href="../../#funktionen"
+              data-i18n="navigation.features"
             >
-              <button
-                class="language-select__option"
-                type="button"
-                data-language-option="de"
-                data-i18n="language.de"
-              >
-                Deutsch
-              </button>
+              Funktionen
+            </a>
+
+            <a
+              class="site-nav__link"
+              href="../../#roadmap"
+              data-i18n="navigation.roadmap"
+            >
+              Roadmap
+            </a>
+          </nav>
+
+          <div class="header-actions">
+            <div class="header-actions__desktop">
+              <div class="language-select">
+                <button
+                  class="language-select__trigger"
+                  type="button"
+                  aria-haspopup="true"
+                  aria-expanded="false"
+                  data-language-trigger
+                  data-i18n-aria-label="accessibility.selectLanguage"
+                  aria-label="Sprache auswählen"
+                >
+                  <span data-language-current>DE</span>
+
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="m7 10 5 5 5-5"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+
+                <div
+                  class="language-select__menu"
+                  hidden
+                  data-language-menu
+                >
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="de"
+                    data-i18n="language.de"
+                  >
+                    Deutsch
+                  </button>
+
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="en"
+                    data-i18n="language.en"
+                  >
+                    English
+                  </button>
+
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="nl"
+                    data-i18n="language.nl"
+                  >
+                    Nederlands
+                  </button>
+
+                  <button
+                    class="language-select__option"
+                    type="button"
+                    data-language-option="es"
+                    data-i18n="language.es"
+                  >
+                    Español
+                  </button>
+                </div>
+              </div>
 
               <button
-                class="language-select__option"
+                class="theme-switch"
                 type="button"
-                data-language-option="en"
-                data-i18n="language.en"
+                data-i18n-aria-label="theme.enableLight"
+                aria-label="Light Mode aktivieren"
+                aria-pressed="true"
+                data-theme-toggle
               >
-                English
+                <span class="theme-switch__thumb" aria-hidden="true">
+                  <svg
+                    width="14"
+                    height="14"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                  >
+                    <path
+                      d="M20.7 15.3A8.5 8.5 0 0 1 8.7 3.3 8.5 8.5 0 1 0 20.7 15.3Z"
+                      stroke="currentColor"
+                      stroke-width="1.8"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </span>
               </button>
 
-              <button
-                class="language-select__option"
-                type="button"
-                data-language-option="nl"
-                data-i18n="language.nl"
+              <a
+                class="button button--primary button--compact"
+                href="../alpha/"
+                data-i18n="navigation.alpha"
               >
-                Nederlands
-              </button>
+                Für Alpha anmelden
+              </a>
+            </div>
+
+            <div class="header-actions__mobile">
+              <a
+                class="button button--primary button--compact"
+                href="../alpha/"
+                data-i18n="navigation.alpha"
+              >
+                Für Alpha anmelden
+              </a>
 
               <button
-                class="language-select__option"
+                class="icon-button"
                 type="button"
-                data-language-option="es"
-                data-i18n="language.es"
+                data-i18n-aria-label="mobileMenu.open"
+                aria-label="Menü öffnen"
+                aria-expanded="false"
+                aria-controls="mobile-navigation"
+                data-mobile-menu-toggle
               >
-                Español
+                <svg
+                  width="22"
+                  height="22"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M4 7h16M4 12h16M4 17h16"
+                    stroke="currentColor"
+                    stroke-width="1.8"
+                    stroke-linecap="round"
+                  />
+                </svg>
               </button>
             </div>
           </div>
-
-          <button
-            class="theme-switch"
-            type="button"
-            aria-label="Light Mode aktivieren"
-            aria-pressed="true"
-            data-theme-toggle
-          >
-            <span class="theme-switch__thumb" aria-hidden="true">
-              <svg
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M20.7 15.3A8.5 8.5 0 0 1 8.7 3.3 8.5 8.5 0 1 0 20.7 15.3Z"
-                  stroke="currentColor"
-                  stroke-width="1.8"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-            </span>
-          </button>
-
-          <a
-            class="button button--primary button--compact"
-            href="../alpha/"
-            data-i18n="navigation.alpha"
-          >
-            Für Alpha anmelden
-          </a>
         </div>
+      </div>
+    </header>
 
-        <div class="header-actions__mobile">
+    <nav
+      id="mobile-navigation"
+      class="mobile-navigation"
+      data-mobile-navigation
+      data-i18n-aria-label="accessibility.mobileNavigation"
+      aria-label="Mobile Navigation"
+    >
+      <div class="mobile-navigation__inner">
+        <div class="mobile-navigation__content container">
           <a
-            class="button button--primary button--compact"
+            class="mobile-navigation__link"
+            href="../../#start"
+            data-i18n="navigation.home"
+          >
+            Startseite
+          </a>
+
+          <a
+            class="mobile-navigation__link"
+            href="../../#funktionen"
+            data-i18n="navigation.features"
+          >
+            Funktionen
+          </a>
+
+          <a
+            class="mobile-navigation__link"
+            href="../../#roadmap"
+            data-i18n="navigation.roadmap"
+          >
+            Roadmap
+          </a>
+
+          <a
+            class="mobile-navigation__link"
             href="../alpha/"
             data-i18n="navigation.alpha"
           >
             Für Alpha anmelden
           </a>
 
+          <div class="mobile-navigation__divider"></div>
+
           <button
-            class="icon-button"
+            class="mobile-navigation__link"
             type="button"
-            aria-label="Menü öffnen"
-            aria-expanded="false"
-            aria-controls="mobile-navigation"
-            data-mobile-menu-toggle
+            data-theme-toggle
+            data-i18n="theme.switch"
           >
-            <svg
-              width="22"
-              height="22"
-              viewBox="0 0 24 24"
-              fill="none"
-              aria-hidden="true"
-            >
-              <path
-                d="M4 7h16M4 12h16M4 17h16"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-              />
-            </svg>
+            Dark / Light wechseln
           </button>
         </div>
       </div>
-    </div>
-  </div>
-</header>
-
-<nav
-  id="mobile-navigation"
-  class="mobile-navigation"
-  data-mobile-navigation
-  data-i18n-aria-label="accessibility.mobileNavigation"
-  aria-label="Mobile Navigation"
->
-  <div class="mobile-navigation__inner">
-    <div class="mobile-navigation__content container">
-      <a
-        class="mobile-navigation__link"
-        href="../../#start"
-        data-i18n="navigation.home"
-      >
-        Startseite
-      </a>
-
-      <a
-        class="mobile-navigation__link"
-        href="../../#funktionen"
-        data-i18n="navigation.features"
-      >
-        Funktionen
-      </a>
-
-      <a
-        class="mobile-navigation__link"
-        href="../../#roadmap"
-        data-i18n="navigation.roadmap"
-      >
-        Roadmap
-      </a>
-
-      <!--
-      <a
-        class="mobile-navigation__link"
-        href="../../#umfrage"
-        data-i18n="navigation.poll"
-      >
-        Umfrage
-      </a>
-      -->
-
-      <a
-        class="mobile-navigation__link"
-        href="../alpha/"
-        data-i18n="navigation.alpha"
-      >
-        Für Alpha anmelden
-      </a>
-
-      <div class="mobile-navigation__divider"></div>
-
-      <button
-        class="mobile-navigation__link"
-        type="button"
-        data-theme-toggle
-        data-i18n="theme.switch"
-      >
-        Dark / Light wechseln
-      </button>
-    </div>
-  </div>
-</nav>
+    </nav>
 
     <main id="main-content" class="site-main">
       <section class="legal-page">
         <div class="container legal-page__layout">
           <nav
             class="section-navigation"
-            aria-label="Inhaltsnavigation"
             data-section-navigation
+            data-i18n-aria-label="privacyPage.sectionNavigation"
+            aria-label="Inhaltsnavigation"
           >
             <a
               class="section-navigation__item"
@@ -319,30 +305,39 @@
               data-section-navigation-link
             >
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navResponsible"
+              >
                 Verantwortlicher
               </span>
             </a>
 
             <a
               class="section-navigation__item"
-              href="#hosting"
+              href="#ueberblick"
               data-section-navigation-link
             >
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
-                Hosting und Server-Logs
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navOverview"
+              >
+                Überblick
               </span>
             </a>
 
             <a
               class="section-navigation__item"
-              href="#local-storage"
+              href="#website"
               data-section-navigation-link
             >
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
-                Local Storage
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navWebsite"
+              >
+                Website und Server-Logs
               </span>
             </a>
 
@@ -352,8 +347,39 @@
               data-section-navigation-link
             >
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navAlpha"
+              >
                 Alpha-Anmeldung
+              </span>
+            </a>
+
+            <a
+              class="section-navigation__item"
+              href="#email"
+              data-section-navigation-link
+            >
+              <span class="section-navigation__line"></span>
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navEmail"
+              >
+                E-Mail-Versand
+              </span>
+            </a>
+
+            <a
+              class="section-navigation__item"
+              href="#speicherung"
+              data-section-navigation-link
+            >
+              <span class="section-navigation__line"></span>
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navStorage"
+              >
+                Speicherung in der Datenbank
               </span>
             </a>
 
@@ -363,8 +389,39 @@
               data-section-navigation-link
             >
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
-                Umfragen
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navPolls"
+              >
+                Umfragen und Cookie
+              </span>
+            </a>
+
+            <a
+              class="section-navigation__item"
+              href="#empfaenger"
+              data-section-navigation-link
+            >
+              <span class="section-navigation__line"></span>
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navRecipients"
+              >
+                Empfänger
+              </span>
+            </a>
+
+            <a
+              class="section-navigation__item"
+              href="#speicherdauer"
+              data-section-navigation-link
+            >
+              <span class="section-navigation__line"></span>
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navRetention"
+              >
+                Speicherdauer
               </span>
             </a>
 
@@ -374,334 +431,642 @@
               data-section-navigation-link
             >
               <span class="section-navigation__line"></span>
-              <span class="section-navigation__label">
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navRights"
+              >
                 Deine Rechte
+              </span>
+            </a>
+
+            <a
+              class="section-navigation__item"
+              href="#sicherheit"
+              data-section-navigation-link
+            >
+              <span class="section-navigation__line"></span>
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navSecurity"
+              >
+                Datensicherheit
+              </span>
+            </a>
+
+            <a
+              class="section-navigation__item"
+              href="#aenderungen"
+              data-section-navigation-link
+            >
+              <span class="section-navigation__line"></span>
+              <span
+                class="section-navigation__label"
+                data-i18n="privacyPage.navChanges"
+              >
+                Änderungen
               </span>
             </a>
           </nav>
 
           <div class="legal-page__content">
             <div class="legal-page__intro">
-              <p class="legal-page__eyebrow">Datenschutz</p>
+              <p
+                class="legal-page__eyebrow"
+                data-i18n="privacyPage.eyebrow"
+              >
+                Datenschutz
+              </p>
 
-              <h1 class="legal-page__title">
+              <h1
+                class="legal-page__title"
+                data-i18n="privacyPage.title"
+              >
                 Datenschutzerklärung
               </h1>
 
-              <p class="legal-page__subtitle">
-                Informationen zur Verarbeitung personenbezogener Daten auf
-                lokapp.de.
+              <p
+                class="legal-page__subtitle"
+                data-i18n="privacyPage.subtitle"
+              >
+                Informationen zur Verarbeitung personenbezogener Daten auf der
+                Website lokapp.de.
               </p>
 
-              <p class="legal-page__updated">
-                Stand: 1. Juli 2026
+              <p
+                class="legal-page__updated"
+                data-i18n="privacyPage.updated"
+              >
+                Stand: 2. Juli 2026
               </p>
             </div>
 
             <details class="legal-mobile-navigation">
-              <summary>Auf dieser Seite</summary>
+              <summary data-i18n="privacyPage.onThisPage">
+                Auf dieser Seite
+              </summary>
 
               <nav class="legal-mobile-navigation__links">
                 <a
                   class="legal-mobile-navigation__link"
                   href="#verantwortlicher"
+                  data-i18n="privacyPage.navResponsible"
                 >
                   Verantwortlicher
                 </a>
 
                 <a
                   class="legal-mobile-navigation__link"
-                  href="#hosting"
+                  href="#ueberblick"
+                  data-i18n="privacyPage.navOverview"
                 >
-                  Hosting und Server-Logs
+                  Überblick
                 </a>
 
                 <a
                   class="legal-mobile-navigation__link"
-                  href="#local-storage"
+                  href="#website"
+                  data-i18n="privacyPage.navWebsite"
                 >
-                  Local Storage
+                  Website und Server-Logs
                 </a>
 
                 <a
                   class="legal-mobile-navigation__link"
                   href="#alpha"
+                  data-i18n="privacyPage.navAlpha"
                 >
                   Alpha-Anmeldung
                 </a>
 
                 <a
                   class="legal-mobile-navigation__link"
-                  href="#umfragen"
+                  href="#email"
+                  data-i18n="privacyPage.navEmail"
                 >
-                  Umfragen
+                  E-Mail-Versand
+                </a>
+
+                <a
+                  class="legal-mobile-navigation__link"
+                  href="#speicherung"
+                  data-i18n="privacyPage.navStorage"
+                >
+                  Speicherung in der Datenbank
+                </a>
+
+                <a
+                  class="legal-mobile-navigation__link"
+                  href="#umfragen"
+                  data-i18n="privacyPage.navPolls"
+                >
+                  Umfragen und Cookie
+                </a>
+
+                <a
+                  class="legal-mobile-navigation__link"
+                  href="#empfaenger"
+                  data-i18n="privacyPage.navRecipients"
+                >
+                  Empfänger
+                </a>
+
+                <a
+                  class="legal-mobile-navigation__link"
+                  href="#speicherdauer"
+                  data-i18n="privacyPage.navRetention"
+                >
+                  Speicherdauer
                 </a>
 
                 <a
                   class="legal-mobile-navigation__link"
                   href="#rechte"
+                  data-i18n="privacyPage.navRights"
                 >
                   Deine Rechte
+                </a>
+
+                <a
+                  class="legal-mobile-navigation__link"
+                  href="#sicherheit"
+                  data-i18n="privacyPage.navSecurity"
+                >
+                  Datensicherheit
+                </a>
+
+                <a
+                  class="legal-mobile-navigation__link"
+                  href="#aenderungen"
+                  data-i18n="privacyPage.navChanges"
+                >
+                  Änderungen
                 </a>
               </nav>
             </details>
 
-            <section
-              id="verantwortlicher"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
+            <section id="verantwortlicher" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.responsibleTitle"
+              >
                 Verantwortlicher
               </h2>
 
               <div class="legal-page__section-content">
+                <p data-i18n="privacyPage.responsibleIntro">
+                  Verantwortlich für die Verarbeitung personenbezogener Daten auf
+                  dieser Website im Sinne der DSGVO ist:
+                </p>
+
                 <address>
                   <strong>Schenk Software</strong><br>
                   Sebastian Schenk<br>
-                  [Straße und Hausnummer]<br>
-                  [PLZ Ort]<br>
+                  Flamingo Straße 7<br>
+                  50126 Bergheim<br>
                   Deutschland
                 </address>
 
+                <p data-i18n="privacyPage.responsibleContactIntro">
+                  Kontakt für Anfragen zum Datenschutz:
+                </p>
+
                 <p>
-                  E-Mail:
-                  <a href="mailto:[deine-email@domain.de]">
-                    [deine-email@domain.de]
+                  <a href="mailto:sebastian@schenksoftware.de">
+                    sebastian@schenksoftware.de
                   </a>
                 </p>
-
-                <p>
-                  Der Verantwortliche entscheidet über Zwecke und Mittel der
-                  Verarbeitung personenbezogener Daten auf dieser Website.
-                </p>
               </div>
             </section>
 
-            <section
-              id="hosting"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                Hosting und Server-Logdateien
+            <section id="ueberblick" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.overviewTitle"
+              >
+                Überblick über die Datenverarbeitung
               </h2>
 
               <div class="legal-page__section-content">
-                <p>
-                  Diese Website wird auf einem selbst verwalteten Server
-                  innerhalb der Europäischen Union betrieben.
-                </p>
+                <p data-i18n="privacyPage.overviewP1">…</p>
+                <p data-i18n="privacyPage.overviewP2">…</p>
+                <p data-i18n="privacyPage.overviewP3">…</p>
+              </div>
+            </section>
 
-                <p>
-                  Beim Aufruf der Website verarbeitet der Server technisch
-                  notwendige Daten in Server-Logdateien. Dazu können gehören:
-                </p>
+            <section id="website" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.websiteTitle"
+              >
+                Bereitstellung der Website und Server-Logdateien
+              </h2>
+
+              <div class="legal-page__section-content">
+                <p data-i18n="privacyPage.websiteP1">…</p>
+                <p data-i18n="privacyPage.websiteLogsIntro">…</p>
 
                 <ul>
-                  <li>IP-Adresse des aufrufenden Endgeräts</li>
-                  <li>Datum und Uhrzeit des Zugriffs</li>
-                  <li>aufgerufene Seite oder Datei</li>
-                  <li>übertragene Datenmenge</li>
-                  <li>HTTP-Statuscode</li>
-                  <li>Referrer-URL, sofern vom Browser übermittelt</li>
-                  <li>Browsertyp, Browser-Version und Betriebssystem</li>
+                  <li data-i18n="privacyPage.websiteLi1">…</li>
+                  <li data-i18n="privacyPage.websiteLi2">…</li>
+                  <li data-i18n="privacyPage.websiteLi3">…</li>
+                  <li data-i18n="privacyPage.websiteLi4">…</li>
+                  <li data-i18n="privacyPage.websiteLi5">…</li>
+                  <li data-i18n="privacyPage.websiteLi6">…</li>
                 </ul>
 
-                <p>
-                  Die Verarbeitung erfolgt zur technischen Bereitstellung,
-                  Sicherheit, Fehleranalyse und Abwehr von Missbrauch.
-                </p>
+                <div class="legal-contact-list">
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.purposeLabel"
+                    >
+                      Zweck
+                    </span>
 
-                <p>
-                  Eine Zusammenführung dieser Daten mit anderen Datenquellen
-                  oder eine Erstellung personenbezogener Nutzungsprofile findet
-                  nicht statt.
-                </p>
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.websitePurpose"
+                    >
+                      …
+                    </span>
+                  </div>
 
-                <div class="legal-info">
-                  <p class="legal-info__label">
-                    Noch festzulegen
-                  </p>
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.dataLabel"
+                    >
+                      Datenkategorien
+                    </span>
 
-                  <p class="legal-info__value">
-                    Vor dem Livegang musst du hier die tatsächliche
-                    Speicherdauer deiner Nginx- und Server-Logs eintragen.
-                    Zum Beispiel 7, 14 oder 30 Tage – abhängig von deiner
-                    finalen Server-Konfiguration.
-                  </p>
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.websiteData"
+                    >
+                      …
+                    </span>
+                  </div>
+
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.legalBasisLabel"
+                    >
+                      Rechtsgrundlage
+                    </span>
+
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.websiteLegalBasis"
+                    >
+                      …
+                    </span>
+                  </div>
+
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.recipientsLabel"
+                    >
+                      Empfänger
+                    </span>
+
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.websiteRecipients"
+                    >
+                      …
+                    </span>
+                  </div>
+
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.storageLabel"
+                    >
+                      Speicherdauer
+                    </span>
+
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.websiteStorage"
+                    >
+                      …
+                    </span>
+                  </div>
                 </div>
+
+                <p data-i18n="privacyPage.websiteRateLimit">…</p>
+                <p data-i18n="privacyPage.websiteNoProfiles">…</p>
               </div>
             </section>
 
-            <section
-              id="local-storage"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                Local Storage und technisch notwendige Einstellungen
+            <section id="alpha" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.alphaTitle"
+              >
+                Alpha-Anmeldung und Double-Opt-in
               </h2>
 
               <div class="legal-page__section-content">
-                <p>
-                  LokApp.de verwendet aktuell keinen Werbetracker, keine
-                  Analyseplattform und kein Geräte-Fingerprinting.
-                </p>
+                <p data-i18n="privacyPage.alphaP1">…</p>
+                <p data-i18n="privacyPage.alphaP2">…</p>
+                <p data-i18n="privacyPage.alphaP3">…</p>
 
-                <p>
-                  Die Website kann den Local Storage deines Browsers verwenden,
-                  um von dir ausdrücklich gewählte Einstellungen lokal zu
-                  speichern.
-                </p>
+                <div class="legal-contact-list">
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.purposeLabel"
+                    >
+                      Zweck
+                    </span>
+
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.alphaPurpose"
+                    >
+                      …
+                    </span>
+                  </div>
+
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.dataLabel"
+                    >
+                      Datenkategorien
+                    </span>
+
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.alphaData"
+                    >
+                      …
+                    </span>
+                  </div>
+
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.legalBasisLabel"
+                    >
+                      Rechtsgrundlage
+                    </span>
+
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.alphaLegalBasis"
+                    >
+                      …
+                    </span>
+                  </div>
+
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.recipientsLabel"
+                    >
+                      Empfänger
+                    </span>
+
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.alphaRecipients"
+                    >
+                      …
+                    </span>
+                  </div>
+
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.storageLabel"
+                    >
+                      Speicherdauer
+                    </span>
+
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.alphaStorage"
+                    >
+                      …
+                    </span>
+                  </div>
+
+                  <div class="legal-contact-list__row">
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.voluntaryLabel"
+                    >
+                      Freiwilligkeit
+                    </span>
+
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.alphaVoluntary"
+                    >
+                      …
+                    </span>
+                  </div>
+                </div>
+
+                <p data-i18n="privacyPage.alphaNoAds">…</p>
+              </div>
+            </section>
+
+            <section id="email" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.emailTitle"
+              >
+                E-Mail-Versand
+              </h2>
+
+              <div class="legal-page__section-content">
+                <p data-i18n="privacyPage.emailP1">…</p>
+                <p data-i18n="privacyPage.emailP2">…</p>
+                <p data-i18n="privacyPage.emailLegalBasis">…</p>
+              </div>
+            </section>
+
+            <section id="speicherung" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.storageTitle"
+              >
+                Speicherung in der Datenbank
+              </h2>
+
+              <div class="legal-page__section-content">
+                <p data-i18n="privacyPage.storageP1">…</p>
+                <p data-i18n="privacyPage.storageP2">…</p>
+              </div>
+            </section>
+
+            <section id="umfragen" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.pollsTitle"
+              >
+                Umfragen und technisches Cookie
+              </h2>
+
+              <div class="legal-page__section-content">
+                <p data-i18n="privacyPage.pollsP1">…</p>
+                <p data-i18n="privacyPage.pollsP2">…</p>
 
                 <div class="legal-contact-list">
                   <div class="legal-contact-list__row">
                     <span class="legal-contact-list__label">
-                      lokapp-theme
+                      <code data-i18n="privacyPage.pollsCookieName">
+                        lokapp_poll_token
+                      </code>
                     </span>
 
-                    <span class="legal-contact-list__value">
-                      Speichert die von dir gewählte Darstellung im Dark- oder
-                      Light-Mode.
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.pollsCookiePurpose"
+                    >
+                      …
                     </span>
                   </div>
 
                   <div class="legal-contact-list__row">
-                    <span class="legal-contact-list__label">
-                      lokapp-active-poll-vote
+                    <span
+                      class="legal-contact-list__label"
+                      data-i18n="privacyPage.storageLabel"
+                    >
+                      Speicherdauer
                     </span>
 
-                    <span class="legal-contact-list__value">
-                      Merkt lokal im Browser, ob für die aktuelle Demo-Umfrage
-                      bereits eine Auswahl getroffen wurde.
+                    <span
+                      class="legal-contact-list__value"
+                      data-i18n="privacyPage.pollsCookieStorage"
+                    >
+                      …
                     </span>
                   </div>
                 </div>
 
-                <p>
-                  Diese Informationen bleiben im Browser auf deinem Gerät und
-                  werden nicht automatisch an Schenk Software übertragen.
-                </p>
+                <p data-i18n="privacyPage.pollsConsent">…</p>
+                <p data-i18n="privacyPage.pollsTextNote">…</p>
+                <p data-i18n="privacyPage.pollsLocalNote">…</p>
               </div>
             </section>
 
-            <section
-              id="alpha"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                Alpha-Anmeldung
+            <section id="empfaenger" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.recipientsTitle"
+              >
+                Empfänger und Auftragsverarbeitung
               </h2>
 
               <div class="legal-page__section-content">
-                <p>
-                  Die Alpha-Anmeldeseite ist derzeit technisch vorbereitet.
-                  Solange kein Server-Backend aktiviert ist, werden über das
-                  Formular keine personenbezogenen Daten dauerhaft gespeichert
-                  oder versendet.
-                </p>
+                <p data-i18n="privacyPage.recipientsP1">…</p>
+                <p data-i18n="privacyPage.recipientsP2">…</p>
+                <p data-i18n="privacyPage.recipientsP3">…</p>
+              </div>
+            </section>
 
-                <p>
-                  Sobald die Alpha-Anmeldung live geht, wird diese Erklärung
-                  vor Aktivierung ergänzt. Sie wird dann insbesondere Angaben zu
-                  folgenden Punkten enthalten:
-                </p>
+            <section id="speicherdauer" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.retentionTitle"
+              >
+                Speicherdauer und Löschung
+              </h2>
+
+              <div class="legal-page__section-content">
+                <p data-i18n="privacyPage.retentionP1">…</p>
 
                 <ul>
-                  <li>verarbeitete Daten, zum Beispiel E-Mail-Adresse und Plattform</li>
-                  <li>Zweck der Verarbeitung und Rechtsgrundlage</li>
-                  <li>Double-Opt-in-Verfahren</li>
-                  <li>Speicherdauer</li>
-                  <li>eingesetzter Maildienst oder Versanddienstleister</li>
-                  <li>Empfänger und Auftragsverarbeiter</li>
+                  <li data-i18n="privacyPage.retentionLi1">…</li>
+                  <li data-i18n="privacyPage.retentionLi2">…</li>
+                  <li data-i18n="privacyPage.retentionLi3">…</li>
+                  <li data-i18n="privacyPage.retentionLi4">…</li>
                 </ul>
               </div>
             </section>
 
-            <section
-              id="umfragen"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
-                Umfragen
-              </h2>
-
-              <div class="legal-page__section-content">
-                <p>
-                  Die aktuelle Umfrage funktioniert derzeit lokal im Browser.
-                  Die Auswahl wird nur über den oben beschriebenen Local
-                  Storage gespeichert.
-                </p>
-
-                <p>
-                  Es findet aktuell keine serverseitige Speicherung einer
-                  Stimme, keine dauerhafte Speicherung der IP-Adresse und kein
-                  Geräte-Fingerprinting statt.
-                </p>
-
-                <p>
-                  Bei einer späteren serverseitigen Umfragefunktion wird diese
-                  Datenschutzerklärung vor Aktivierung ergänzt. Dabei wird
-                  beschrieben, wie Mehrfachabstimmungen technisch begrenzt
-                  werden und welche Daten kurzfristig für Missbrauchsschutz
-                  verarbeitet werden.
-                </p>
-              </div>
-            </section>
-
-            <section
-              id="rechte"
-              class="legal-page__section"
-            >
-              <h2 class="legal-page__section-title">
+            <section id="rechte" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.rightsTitle"
+              >
                 Deine Rechte
               </h2>
 
               <div class="legal-page__section-content">
-                <p>
-                  Du hast – soweit die jeweiligen gesetzlichen Voraussetzungen
-                  vorliegen – insbesondere folgende Rechte:
-                </p>
+                <p data-i18n="privacyPage.rightsP1">…</p>
 
                 <ul>
-                  <li>Auskunft über gespeicherte personenbezogene Daten</li>
-                  <li>Berichtigung unrichtiger Daten</li>
-                  <li>Löschung personenbezogener Daten</li>
-                  <li>Einschränkung der Verarbeitung</li>
-                  <li>Widerspruch gegen die Verarbeitung</li>
-                  <li>Datenübertragbarkeit</li>
-                  <li>Beschwerde bei einer Datenschutzaufsichtsbehörde</li>
+                  <li data-i18n="privacyPage.rightsLi1">…</li>
+                  <li data-i18n="privacyPage.rightsLi2">…</li>
+                  <li data-i18n="privacyPage.rightsLi3">…</li>
+                  <li data-i18n="privacyPage.rightsLi4">…</li>
+                  <li data-i18n="privacyPage.rightsLi5">…</li>
+                  <li data-i18n="privacyPage.rightsLi6">…</li>
                 </ul>
 
-                <p>
-                  Zur Ausübung deiner Rechte kannst du dich an die oben
-                  genannte Kontaktadresse wenden.
-                </p>
+                <h3
+                  class="legal-page__subsection-title"
+                  data-i18n="privacyPage.rightsWithdrawalTitle"
+                >
+                  Widerruf der Einwilligung
+                </h3>
+
+                <p data-i18n="privacyPage.rightsWithdrawal">…</p>
+
+                <h3
+                  class="legal-page__subsection-title"
+                  data-i18n="privacyPage.rightsComplaintTitle"
+                >
+                  Beschwerderecht bei einer Aufsichtsbehörde
+                </h3>
+
+                <p data-i18n="privacyPage.rightsComplaint">…</p>
+
+                <p data-i18n="privacyPage.rightsContact">…</p>
               </div>
             </section>
 
-            <section class="legal-page__section">
-              <h2 class="legal-page__section-title">
+            <section id="sicherheit" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.securityTitle"
+              >
+                Datensicherheit
+              </h2>
+
+              <div class="legal-page__section-content">
+                <p data-i18n="privacyPage.securityP1">…</p>
+                <p data-i18n="privacyPage.securityP2">…</p>
+              </div>
+            </section>
+
+            <section id="aenderungen" class="legal-page__section">
+              <h2
+                class="legal-page__section-title"
+                data-i18n="privacyPage.changesTitle"
+              >
                 Änderungen dieser Datenschutzerklärung
               </h2>
 
               <div class="legal-page__section-content">
-                <p>
-                  Diese Datenschutzerklärung wird angepasst, wenn sich die
-                  Website, eingesetzte Dienste oder Datenverarbeitungen ändern.
-                </p>
-
-                <p>
-                  Vor dem Livegang von Alpha-Anmeldung, E-Mail-Versand,
-                  serverseitigen Umfragen, Analytics, Cloud-Diensten oder
-                  Zahlungsfunktionen muss diese Seite erweitert und geprüft
-                  werden.
-                </p>
+                <p data-i18n="privacyPage.changesP1">…</p>
+                <p data-i18n="privacyPage.changesP2">…</p>
               </div>
             </section>
 
-            <p class="legal-page__note">
-              Diese Fassung ist eine technische Ausgangsbasis für den aktuellen
-              Stand der Website. Sie ersetzt keine individuelle rechtliche
-              Prüfung vor dem öffentlichen Launch.
+            <p
+              class="legal-page__note"
+              data-i18n="privacyPage.finalNote"
+            >
+              Diese Datenschutzerklärung beschreibt den aktuellen technischen
+              Stand der Website.
             </p>
           </div>
         </div>
@@ -711,22 +1076,38 @@
     <footer class="site-footer">
       <div class="site-footer__inner container">
         <div class="site-footer__brand">
-          <a class="wordmark" href="../../" aria-label="LokApp Startseite">
+          <a
+            class="wordmark"
+            href="../../"
+            aria-label="LokApp Startseite"
+            data-i18n-aria-label="accessibility.home"
+          >
             <span class="wordmark__mark" aria-hidden="true">L</span>
             <span class="wordmark__text">LokApp</span>
           </a>
 
-          <p class="site-footer__description">
+          <p
+            class="site-footer__description"
+            data-i18n="footer.description"
+          >
             LokApp ist ein Produkt von Schenk Software.
           </p>
 
-          <p class="site-footer__legal">
+          <p class="site-footer__legal" data-i18n="footer.rights">
             © 2026 Schenk Software. Alle Rechte vorbehalten.
           </p>
         </div>
 
-        <nav class="site-footer__links" aria-label="Footer Navigation">
-          <a class="site-footer__link" href="../impressum/">
+        <nav
+          class="site-footer__links"
+          aria-label="Footer Navigation"
+          data-i18n-aria-label="footer.navigation"
+        >
+          <a
+            class="site-footer__link"
+            href="../impressum/"
+            data-i18n="footer.imprint"
+          >
             Impressum
           </a>
 
@@ -734,17 +1115,25 @@
             class="site-footer__link"
             href="./"
             aria-current="page"
+            data-i18n="footer.privacy"
           >
             Datenschutz
           </a>
 
-          <a class="site-footer__link" href="../agb/">
+          <a
+            class="site-footer__link"
+            href="../agb/"
+            data-i18n="footer.terms"
+          >
             AGB
           </a>
 
           <a
             class="site-footer__link"
             href="https://schenk-software.de"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-i18n="footer.company"
           >
             Schenk Software
           </a>
