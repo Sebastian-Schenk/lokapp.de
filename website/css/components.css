@@ -665,3 +665,37 @@
     display: none;
   }
 }
+
+
+.wordmark {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--color-text-primary);
+    text-decoration: none;
+}
+
+.wordmark__logo {
+    display: block;
+    width: 2rem;
+    height: 2rem;
+    flex: 0 0 auto;
+    object-fit: contain;
+}
+
+.wordmark__logo {
+    display: block;
+    width: 3rem;
+    height: 3rem;
+    flex: 0 0 3rem;
+    object-fit: contain;
+    transform: scale(1.45);
+    transform-origin: center;
+}
+
+/* Altes L-Icon nur ausblenden, wenn das neue Bild genutzt wird. */
+.wordmark:has(.wordmark__logo) .wordmark__mark {
+    display: none;
+}
+
+
