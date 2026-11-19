@@ -1,0 +1,185 @@
+/* ── Security-Slice 4.4b: Account-Löschung (Anfrage + Bestätigung) ───────── */
+/*
+  Bewusst eigenständig von css/status-pages.css (das in diesem Repository
+  derzeit nur als unfertige, nicht committete lokale Änderung existiert) –
+  diese drei Klassen sind eine bewusst eigenständige, kleine Kopie der
+  gleichwertigen .status-page__*-Stile, damit diese Seite ohne jede
+  Abhängigkeit auf unfertige, fremde Arbeit funktioniert.
+*/
+
+.account-deletion-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin: 0;
+  color: var(--lokapp-blue);
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.account-deletion-title {
+  max-width: none;
+  margin-top: var(--space-5);
+  color: var(--text-primary);
+  font-size: clamp(2.2rem, 4.5vw, 3.2rem);
+  font-weight: var(--font-weight-bold);
+  letter-spacing: -0.03em;
+  line-height: 1.05;
+}
+
+.account-deletion-description {
+  max-width: 35rem;
+  margin-top: var(--space-6);
+  color: var(--text-secondary);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: var(--line-height-relaxed);
+}
+
+.account-deletion-page {
+  min-height: 100svh;
+  background: var(--bg);
+}
+
+.account-deletion-page__main {
+  display: grid;
+  min-height: 100svh;
+}
+
+.account-deletion-page__layout {
+  display: grid;
+  min-height: 100svh;
+  grid-template-rows: auto 1fr auto;
+  padding-block: clamp(2rem, 5vw, 4rem);
+}
+
+.account-deletion-page__wordmark {
+  justify-self: start;
+}
+
+.account-deletion-page__content {
+  display: grid;
+  align-content: center;
+  max-width: 34rem;
+  padding-block: clamp(3rem, 10vh, 7rem);
+}
+
+.account-deletion-page__footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-4);
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.account-deletion-page__footer nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-5);
+}
+
+.account-deletion-page__footer a {
+  color: var(--text-secondary);
+}
+
+.account-deletion-page__footer a:hover {
+  color: var(--lokapp-blue);
+}
+
+.account-deletion-form-card {
+  display: grid;
+  gap: var(--space-5);
+  margin-top: var(--space-7);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.account-deletion-form {
+  display: grid;
+  gap: var(--space-5);
+}
+
+.account-deletion-form__field {
+  display: grid;
+  gap: var(--space-2);
+}
+
+.account-deletion-form__label {
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+}
+
+.account-deletion-form__input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  color: var(--text-primary);
+  font-size: var(--font-size-md, 1rem);
+}
+
+.account-deletion-form__input:focus-visible {
+  outline: 2px solid var(--lokapp-blue);
+  outline-offset: 1px;
+}
+
+.account-deletion-form__hint {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: var(--font-size-xs);
+}
+
+.account-deletion-form__feedback {
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface) 88%, var(--lokapp-blue));
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+}
+
+.account-deletion-form__feedback[data-tone='error'] {
+  background: color-mix(in srgb, var(--surface) 85%, #dc2626);
+}
+
+.account-deletion-form__feedback[data-tone='success'] {
+  background: color-mix(in srgb, var(--surface) 85%, #16a34a);
+}
+
+.account-deletion-form__submit {
+  justify-self: start;
+}
+
+.account-deletion-form__submit:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.account-deletion-warning {
+  margin-top: var(--space-6);
+  padding: var(--space-4);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: color-mix(in srgb, var(--surface) 90%, #dc2626);
+  color: var(--text-primary);
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-relaxed);
+}
+
+@media (max-width: 560px) {
+  .account-deletion-page {
+    min-height: calc(100svh - 4.5rem);
+  }
+
+  .account-deletion-page__footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .account-deletion-page__footer nav {
+    gap: var(--space-4);
+  }
+}
