@@ -52,6 +52,12 @@ services:
       SMTP_PASSWORD: "${SMTP_PASSWORD}"
       SMTP_FROM: "LokApp Alpha <alpha@lokapp.de>"
 
+      # Slice 4.4b: Account-Löschung (Service-to-Service zum App-Backend).
+      # ACCOUNT_DELETION_INTERNAL_SECRET muss identisch mit dem Wert in
+      # Hardware/server docker-compose.yml sein. Generieren: openssl rand -hex 32
+      ACCOUNT_DELETION_BACKEND_URL: "http://app-api:3000"
+      ACCOUNT_DELETION_INTERNAL_SECRET: "${ACCOUNT_DELETION_INTERNAL_SECRET:-}"
+
     expose:
       - "3000"
 

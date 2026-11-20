@@ -6,6 +6,11 @@ import helmet from 'helmet';
 import nodemailer from 'nodemailer';
 import pg from 'pg';
 
+import {
+  createAccountDeletionBackendClient,
+  registerAccountDeletionRoutes,
+} from './account-deletion.js';
+
 const { Pool } = pg;
 
 const requiredEnv = (name) => {
@@ -17,6 +22,8 @@ const requiredEnv = (name) => {
 
   return value;
 };
+
+const optionalEnv = (name, fallback = '') => process.env[name]?.trim() || fallback;
 
 const config = {
   nodeEnv: process.env.NODE_ENV || 'production',
@@ -675,6 +682,28 @@ app.post(
   },
 );
 
+// ---------------------------------------------------------------------------
+// Security-Slice 4.4b – Website Account Deletion
+//
+// Eigenständiges Modul (siehe account-deletion.js), schreibt nie direkt in
+// die App-Backend-Datenbank, sondern ausschließlich über den hier
+// erzeugten, per Shared Secret geschützten Client. Eigenes Secret,
+// unabhängig von jeder anderen internen App-Backend-Fähigkeit.
+// ---------------------------------------------------------------------------
+const accountDeletionBackend = createAccountDeletionBackendClient({
+  internalUrl: optionalEnv('ACCOUNT_DELETION_BACKEND_URL').replace(/\/$/, ''),
+  internalSecret: optionalEnv('ACCOUNT_DELETION_INTERNAL_SECRET'),
+  timeoutMs: Number(process.env.ACCOUNT_DELETION_INTERNAL_TIMEOUT_MS) || 8000,
+});
+
+registerAccountDeletionRoutes(app, {
+  mailer,
+  smtpFrom: config.smtp.from,
+  publicBaseUrl: config.publicBaseUrl,
+  confirmationPagePath: '/pages/account-loeschen/bestaetigen/',
+  backendClient: accountDeletionBackend,
+});
+
 app.use((_request, response) => {
   response.status(404).json({
     error: 'Not found.',
@@ -708,6 +737,12 @@ const start = async () => {
   app.listen(config.apiPort, () => {
     console.log(`LokApp web API listening on port ${config.apiPort}.`);
   });
+
+  if (!accountDeletionBackend.isConfigured) {
+    console.warn(
+      'Account deletion backend bridge is not configured. Account deletion requests will fail with 503.',
+    );
+  }
 
   mailer.verify()
     .then(() => {

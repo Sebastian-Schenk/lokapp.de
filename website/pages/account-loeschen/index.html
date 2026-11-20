@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+      name="description"
+      content="Fordere die Löschung deines LokApp-Accounts an."
+    >
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="theme-color" content="#0F172A">
+
+    <title>Account löschen – LokApp</title>
+
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/Logo.svg">
+
+    <link rel="stylesheet" href="../../css/tokens.css">
+    <link rel="stylesheet" href="../../css/reset.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/layout.css">
+    <link rel="stylesheet" href="../../css/components.css">
+    <link rel="stylesheet" href="../../css/sections.css">
+    <link rel="stylesheet" href="../../css/responsive.css">
+    <link rel="stylesheet" href="../../css/account-deletion.css">
+
+    <script src="../../js/theme.js" defer></script>
+  </head>
+
+  <body class="account-deletion-page">
+    <main id="main-content" class="account-deletion-page__main">
+      <div class="container account-deletion-page__layout">
+        <a class="wordmark account-deletion-page__wordmark" href="../../" aria-label="LokApp Startseite">
+          <img
+            class="wordmark__logo"
+            src="../../assets/icons/Logo.svg"
+            alt=""
+            width="36"
+            height="36"
+          >
+          <span class="wordmark__text">LokApp</span>
+        </a>
+
+        <section class="account-deletion-page__content" aria-labelledby="account-deletion-title">
+          <p class="account-deletion-eyebrow">
+            Account löschen
+          </p>
+
+          <h1 id="account-deletion-title" class="account-deletion-title">
+            Deinen LokApp-Account endgültig löschen
+          </h1>
+
+          <p class="account-deletion-description">
+            Gib die E-Mail-Adresse deines Accounts ein. Wenn sie zu einem
+            LokApp-Account gehört, senden wir dir eine Bestätigungsmail.
+            Deine Daten werden erst gelöscht, wenn du den Link in dieser Mail
+            ausdrücklich bestätigst – die bloße Eingabe hier löscht noch
+            nichts.
+          </p>
+
+          <article class="card account-deletion-form-card">
+            <form class="account-deletion-form" data-account-deletion-request-form novalidate>
+              <div class="account-deletion-form__field">
+                <label class="account-deletion-form__label" for="account-deletion-email">
+                  E-Mail-Adresse deines Accounts
+                </label>
+
+                <input
+                  id="account-deletion-email"
+                  class="account-deletion-form__input"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  placeholder="name@example.com"
+                  required
+                >
+
+                <p class="account-deletion-form__hint">
+                  Aus Datenschutzgründen bestätigen wir hier nicht, ob diese
+                  Adresse tatsächlich zu einem Account gehört.
+                </p>
+              </div>
+
+              <button class="button button--primary account-deletion-form__submit" type="submit" data-account-deletion-submit>
+                Löschung per E-Mail bestätigen lassen
+              </button>
+
+              <p class="account-deletion-form__feedback" hidden aria-live="polite" data-account-deletion-feedback></p>
+            </form>
+          </article>
+
+          <p class="account-deletion-warning" role="note">
+            Achtung: Die Löschung ist endgültig. Alle deine Items, Bilder und
+            Profildaten werden unwiderruflich entfernt und können danach
+            nicht wiederhergestellt werden.
+          </p>
+        </section>
+
+        <footer class="account-deletion-page__footer">
+          <span>© 2026 Schenk Software</span>
+
+          <nav aria-label="Rechtliche Links">
+            <a href="../impressum/">
+              Impressum
+            </a>
+
+            <a href="../datenschutz/">
+              Datenschutz
+            </a>
+          </nav>
+        </footer>
+      </div>
+    </main>
+
+    <script src="../../js/account-deletion.js" defer></script>
+  </body>
+</html>

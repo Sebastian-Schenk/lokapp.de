@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="de" data-theme="dark">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta
+      name="description"
+      content="Bestätige die Löschung deines LokApp-Accounts."
+    >
+    <meta name="robots" content="noindex, nofollow">
+
+    <meta name="theme-color" content="#0F172A">
+
+    <title>Account-Löschung bestätigen – LokApp</title>
+
+    <link rel="icon" type="image/svg+xml" href="../../../assets/icons/Logo.svg">
+
+    <link rel="stylesheet" href="../../../css/tokens.css">
+    <link rel="stylesheet" href="../../../css/reset.css">
+    <link rel="stylesheet" href="../../../css/base.css">
+    <link rel="stylesheet" href="../../../css/layout.css">
+    <link rel="stylesheet" href="../../../css/components.css">
+    <link rel="stylesheet" href="../../../css/sections.css">
+    <link rel="stylesheet" href="../../../css/responsive.css">
+    <link rel="stylesheet" href="../../../css/account-deletion.css">
+
+    <script src="../../../js/theme.js" defer></script>
+  </head>
+
+  <body class="account-deletion-page">
+    <main id="main-content" class="account-deletion-page__main">
+      <div class="container account-deletion-page__layout">
+        <a class="wordmark account-deletion-page__wordmark" href="../../../" aria-label="LokApp Startseite">
+          <img
+            class="wordmark__logo"
+            src="../../../assets/icons/Logo.svg"
+            alt=""
+            width="36"
+            height="36"
+          >
+          <span class="wordmark__text">LokApp</span>
+        </a>
+
+        <section
+          class="account-deletion-page__content"
+          aria-labelledby="account-deletion-confirm-title"
+          data-account-deletion-confirm
+        >
+          <p class="account-deletion-eyebrow">
+            Account löschen
+          </p>
+
+          <h1
+            id="account-deletion-confirm-title"
+            class="account-deletion-title"
+          >
+            Löschung jetzt endgültig bestätigen
+          </h1>
+
+          <p class="account-deletion-description">
+            Wenn du deinen LokApp-Account wirklich unwiderruflich löschen
+            möchtest, bestätige das mit einem Klick auf den Button unten.
+            Noch ist nichts gelöscht – das Öffnen dieser Seite allein löst
+            noch keine Löschung aus.
+          </p>
+
+          <article class="card account-deletion-form-card">
+            <button
+              class="button button--primary account-deletion-form__submit"
+              type="button"
+              data-account-deletion-confirm-button
+            >
+              Account jetzt endgültig löschen
+            </button>
+
+            <p class="account-deletion-form__feedback" hidden aria-live="polite" data-account-deletion-feedback></p>
+          </article>
+
+          <p class="account-deletion-warning" role="note">
+            Achtung: Diese Aktion kann nicht zurückgenommen werden. Nach der
+            Bestätigung werden deine Items, Bilder und Profildaten
+            unwiderruflich entfernt. Das kann einige Zeit dauern – du musst
+            nicht auf dieser Seite warten.
+          </p>
+        </section>
+
+        <footer class="account-deletion-page__footer">
+          <span>© 2026 Schenk Software</span>
+
+          <nav aria-label="Rechtliche Links">
+            <a href="../../impressum/">
+              Impressum
+            </a>
+
+            <a href="../../datenschutz/">
+              Datenschutz
+            </a>
+          </nav>
+        </footer>
+      </div>
+    </main>
+
+    <script src="../../../js/account-deletion.js" defer></script>
+  </body>
+</html>
