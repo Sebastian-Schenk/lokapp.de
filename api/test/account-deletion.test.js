@@ -302,7 +302,7 @@ describe('Website Account Deletion (Security-Slice 4.4b)', () => {
   // PostgreSQL-Ausfall im App-Backend)
   // -------------------------------------------------------------------------
 
-  it('schlägt der E-Mail-Versand fehl, antwortet die API mit 503, nicht mit 202', async () => {
+  it('schlägt der E-Mail-Versand fehl, antwortet die API mit 202 (keine Account-Enumeration via SMTP-Fehler)', async () => {
     const mailer = createFakeMailer();
     mailer.fail = true;
     const app = buildApp({ mailer, backendClient: backend.client });
@@ -311,7 +311,10 @@ describe('Website Account Deletion (Security-Slice 4.4b)', () => {
     backend.state.accounts.set(email, crypto.randomUUID());
 
     const res = await request(app).post('/api/v1/account-deletion/request').send({ email });
-    assert.equal(res.status, 503);
+    // Kein 503: eine 503-Antwort nur für bekannte Accounts würde verraten, ob
+    // die Adresse registriert ist (Account-Enumeration über SMTP-Ausfall).
+    assert.equal(res.status, 202);
+    assert.ok(res.body.message);
   });
 
   it('ist das App-Backend nicht erreichbar, antworten request und confirm mit 503', async () => {

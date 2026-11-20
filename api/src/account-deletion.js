@@ -243,19 +243,20 @@ export const registerAccountDeletionRoutes = (
               expiresInMinutes: result.expiresInMinutes,
             });
           } catch (error) {
+            // SMTP-Fehler werden geloggt, aber NICHT als 503 weitergegeben –
+            // eine 503-Antwort nur für bekannte Accounts würde verraten, ob die
+            // Adresse registriert ist (Account-Enumeration über SMTP-Ausfall).
             console.error('Account deletion confirmation email could not be sent:', {
               code: error.code,
               command: error.command,
               responseCode: error.responseCode,
               message: error.message,
             });
-
-            return response.status(503).json(SERVICE_UNAVAILABLE_RESPONSE);
           }
         }
 
-        // result.found === false fließt absichtlich in dieselbe Antwort wie
-        // oben – keine Account-Enumeration über die API möglich.
+        // Immer dieselbe generische Antwort – unabhängig davon, ob der Account
+        // existiert, nicht verifiziert ist, oder ob der SMTP-Versand fehlschlug.
         return response.status(202).json(GENERIC_ACCOUNT_DELETION_REQUEST_RESPONSE);
       } catch (error) {
         return next(error);
